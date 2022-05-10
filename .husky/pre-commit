@@ -3,13 +3,6 @@
 
 echo 'PRE-TESTING COMMIT 🤞'
 
-# ============================== UPDATE PRETTIER FILE ==============================
-npm run format ||
-(
-    echo 'Update Format in Files ⏱';
-    false;
-)
-
 # ============================== check PRETTIER ==============================
 npm run check-format ||
 (
