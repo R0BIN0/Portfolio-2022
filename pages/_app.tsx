@@ -1,4 +1,4 @@
-import GlobalStyle from "../styles/Global/Global.style";
+import GlobalStyle from "../styles/Global/Reset.style";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
