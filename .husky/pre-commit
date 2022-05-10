@@ -1,0 +1,51 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'PRE-TESTING COMMIT 🤞'
+
+# ============================== UPDATE PRETTIER FILE ==============================
+npm run format ||
+(
+    echo 'Update Format in Files ⏱';
+    false;
+)
+
+# ============================== check PRETTIER ==============================
+npm run check-format ||
+(
+    echo '❌ Prettier check failed. (try to : npm run format) ❌';
+    false;
+)
+
+# ============================== check ESLINT ==============================
+
+npm run check-lint ||
+(
+        echo '❌ ESLint check failed. ❌'
+        false; 
+)
+
+# ============================== check TS CONFIG ==============================
+
+npm run check-types ||
+(
+    echo '❌ TypeScript check failed. ❌'
+    false;
+)
+
+# ============================== TRY TO BUILD ==============================
+
+echo '🤔 Everything looks good. Try to npm run build 🤔'
+
+# ============================== check RUN BUILD ==============================
+
+
+npm run build ||
+(
+    echo '❌🔨 run build failed ❌🔨'
+    false;
+)
+
+# ============================== SUCCESS ==============================
+
+echo '✅ Commit done with SUCCESS. ✅'
