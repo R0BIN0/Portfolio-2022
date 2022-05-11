@@ -7,7 +7,7 @@ import { colors, fontSize, margin } from "../../config/variables";
 export const CustomLink = styled.a`
   height: 20px;
   color: ${colors.CTA};
-  font-size: ${fontSize.S};
+  font-size: ${fontSize.XS};
   font-weight: 600;
   transition: all 500ms cubic-bezier(1, 0, 0, 1) 0ms;
 

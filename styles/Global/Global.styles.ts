@@ -59,12 +59,12 @@ export const TitleContainer = styled.div<TitleContainer>`
 // =================================== TITLE ===================================
 
 export const Title = styled.h1`
-  font-size: ${fontSize.XXL};
-  font-weight: 400;
+  font-size: ${fontSize.XL};
+  font-weight: 500;
   line-height: 1.5;
   margin-bottom: 1rem;
 
   strong {
-    font-weight: 600;
+    font-weight: 700;
   }
 `;
