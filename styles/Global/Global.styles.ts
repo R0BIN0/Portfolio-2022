@@ -1,5 +1,6 @@
 // General
 import styled from "styled-components";
+import { fontSize } from "../../config/variables";
 
 //  Types
 
@@ -13,6 +14,10 @@ type Container = {
   maxWidth: string;
 };
 
+type TitleContainer = {
+  margin: string;
+};
+
 // =================================== FLEX ===================================
 
 export const Flex = styled.div<Flex>`
@@ -21,6 +26,7 @@ export const Flex = styled.div<Flex>`
   justify-content: ${({ justifyContent }) => justifyContent};
   align-items: ${({ alignItems }) => alignItems};
   flex-flow: ${({ flexFlow }) => flexFlow && "column"};
+  position: relative;
 `;
 
 // =================================== CONTAINER ===================================
@@ -37,8 +43,24 @@ export const Container = styled.div<Container>`
   }
 `;
 
+// =================================== TITLE CONTAINER ===================================
+
+export const TitleContainer = styled.div<TitleContainer>`
+  margin: ${({ margin }) => margin};
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+`;
+
 // =================================== TITLE ===================================
 
 export const Title = styled.h1`
-  font-size: 2rem;
+  font-size: ${fontSize.XXL};
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+
+  strong {
+    font-weight: 600;
+  }
 `;

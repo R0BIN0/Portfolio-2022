@@ -11,7 +11,7 @@ export const fontFamily = {
 export const colors = {
   PRIMARY: "#393D46",
   SECONDARY: "#F8F8F8",
-  CTA: "#BF8A23",
+  CTA: "#FFA800",
 };
 
 // ================= FONT-SIZE =================
