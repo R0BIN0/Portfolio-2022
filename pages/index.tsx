@@ -1,10 +1,15 @@
+// General
 import type { NextPage } from "next";
+
+// Styles
 import {
   Container,
   TitleContainer,
   Title,
   Flex,
 } from "../styles/Global/Global.styles";
+
+import { CardContainer } from "../styles/PagesStyles/index.styles";
 
 // Components
 import ButtonLink from "../components/ButtonLink/ButtonLink";
@@ -23,16 +28,18 @@ const Home: NextPage = () => {
         </TitleContainer>
       </Container>
       <Container maxWidth="1024px">
-        <Flex
-          justifyContent="center"
-          alignItems="center"
-          flexFlow={true}
-          margin="4rem 0"
-        >
-          {[...Array(3)].map((_, i) => (
-            <Card key={i} />
-          ))}
-        </Flex>
+        <CardContainer>
+          <Flex
+            justifyContent="center"
+            alignItems="center"
+            flexFlow={true}
+            margin="4rem 0"
+          >
+            {[...Array(3)].map((_, i) => (
+              <Card key={i} id={i} />
+            ))}
+          </Flex>
+        </CardContainer>
       </Container>
     </Container>
   );

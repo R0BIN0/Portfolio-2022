@@ -1,4 +1,7 @@
+// General
 import styled from "styled-components";
+
+// Variables
 import { colors, fontSize, margin, padding } from "../../config/variables";
 
 export const CardBox = styled.div`
@@ -11,6 +14,7 @@ export const CardBox = styled.div`
   cursor: pointer;
   transition: transform 200ms cubic-bezier(1, 0, 0, 1) 0ms;
 
+  position: relative;
   &:hover {
     transform: translateY(-5px);
   }
@@ -23,6 +27,34 @@ export const CardBox = styled.div`
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
+  }
+`;
+
+export const CardYear = styled.div`
+  padding: 0 ${padding.PADDING_4};
+  width: 135px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: -135px;
+
+  p {
+    height: 35px;
+    font-size: ${fontSize.XXL};
+    font-weight: 500;
+  }
+
+  .line {
+    width: 20px;
+    height: 1px;
+    background-color: ${colors.PRIMARY};
+  }
+
+  @media screen and (max-width: 1250px) {
+    left: 0px;
+    top: -50px;
+    padding: 0;
+    width: 100px;
   }
 `;
 

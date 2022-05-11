@@ -1,20 +1,35 @@
 // General
+import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 // Styles
-import { CardBox, CardLeft, CardRight } from "./Card.styles";
+import { CardBox, CardYear, CardLeft, CardRight } from "./Card.styles";
 import { Flex } from "../../styles/Global/Global.styles";
 
 // Images
 import testImg from "../../assets/images/Frame1.png";
 import react from "../../assets/images/React.png";
 
-const Card = () => {
+// Types
+
+type Props = {
+  id: number;
+};
+
+const Card: FC<Props> = ({ id }) => {
   return (
     <>
       <Link href="/project/1">
         <CardBox>
+          {id === 0 && (
+            <CardYear>
+              <Flex justifyContent="space-between" alignItems="center">
+                <p>2022</p>
+                <div className="line"></div>
+              </Flex>
+            </CardYear>
+          )}
           <CardLeft>
             <Flex
               justifyContent="space-between"
