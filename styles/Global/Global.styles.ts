@@ -13,10 +13,11 @@ type Flex = {
 
 type Container = {
   maxWidth: string;
+  padding?: string;
 };
 
 type TitleContainer = {
-  margin: string;
+  margin?: string;
 };
 
 // =================================== FLEX ===================================
@@ -34,14 +35,15 @@ export const Flex = styled.div<Flex>`
 // =================================== CONTAINER ===================================
 
 export const Container = styled.div<Container>`
+  position: relative;
   width: 100%;
   height: 100%;
   max-width: ${({ maxWidth }) => maxWidth};
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: ${({ padding }) => (padding ? `${padding} 4rem` : "0 4rem")};
 
   @media screen and (max-width: 500px) {
-    padding: 0 1rem;
+    padding: ${({ padding }) => (padding ? `${padding} 2rem` : "0 2rem")};
   }
 `;
 
