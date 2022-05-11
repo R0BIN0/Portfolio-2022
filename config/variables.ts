@@ -10,6 +10,7 @@ export const fontFamily = {
 
 export const colors = {
   PRIMARY: "#393D46",
+  PRIMARY_LIGHT: "#7E8492",
   SECONDARY: "#F8F8F8",
   CTA: "#FFA800",
 };
@@ -17,13 +18,13 @@ export const colors = {
 // ================= FONT-SIZE =================
 
 export const fontSize = {
-  XS: ".8rem",
-  S: ".9rem",
-  MD: "1rem",
-  LG: "1.25rem",
-  XL: "1.5rem",
-  XXL: "2rem",
-  XXXL: "2.5rem",
+  XS: ".8em",
+  S: ".9em",
+  MD: "1em",
+  LG: "1.25em",
+  XL: "1.5em",
+  XXL: "2em",
+  XXXL: "2.5em",
 };
 
 // ================= PADDING =================

@@ -8,6 +8,7 @@ type Flex = {
   justifyContent: string;
   alignItems: string;
   flexFlow?: boolean;
+  margin?: string;
 };
 
 type Container = {
@@ -25,7 +26,8 @@ export const Flex = styled.div<Flex>`
   display: flex;
   justify-content: ${({ justifyContent }) => justifyContent};
   align-items: ${({ alignItems }) => alignItems};
-  flex-flow: ${({ flexFlow }) => flexFlow && "column"};
+  flex-flow: ${({ flexFlow }) => flexFlow && "column nowrap"};
+  margin: ${({ margin }) => margin};
   position: relative;
 `;
 

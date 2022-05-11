@@ -3,10 +3,12 @@ import {
   Container,
   TitleContainer,
   Title,
+  Flex,
 } from "../styles/Global/Global.styles";
 
 // Components
 import ButtonLink from "../components/ButtonLink/ButtonLink";
+import Card from "../components/Card/Card";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +21,18 @@ const Home: NextPage = () => {
           </Title>
           <ButtonLink txt="En savoir plus sur moi" href="/me" />
         </TitleContainer>
+      </Container>
+      <Container maxWidth="1024px">
+        <Flex
+          justifyContent="center"
+          alignItems="center"
+          flexFlow={true}
+          margin="4rem 0"
+        >
+          {[...Array(3)].map((_, i) => (
+            <Card key={i} />
+          ))}
+        </Flex>
       </Container>
     </Container>
   );
