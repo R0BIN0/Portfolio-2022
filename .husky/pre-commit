@@ -3,6 +3,13 @@
 
 echo 'PRE-TESTING COMMIT 🤞'
 
+# ============================== FORMAT  ==============================
+npm run format ||
+(
+    echo '❌ Format Failed ❌';
+    false;
+)
+
 # ============================== check PRETTIER ==============================
 npm run check-format ||
 (
