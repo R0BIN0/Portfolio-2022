@@ -36,3 +36,9 @@ export const Container = styled.div<Container>`
     padding: 0 1rem;
   }
 `;
+
+// =================================== TITLE ===================================
+
+export const Title = styled.h1`
+  font-size: 2rem;
+`;

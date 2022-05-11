@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { fontFamily } from "../../config/variables";
 
 // =================================== CSS RESET ===================================
 
@@ -162,5 +163,6 @@ a {
 
 body {
   line-height: 1;
+  font-family: ${fontFamily.SANS_SERIF};
 }
 `;
