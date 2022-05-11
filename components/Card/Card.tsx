@@ -37,8 +37,8 @@ const Card: FC<Props> = ({ id }) => {
               flexFlow={true}
             >
               <div>
-                <p className="card-top-title">Site e-commerce</p>
-                <h2 className="card-title">Mobile-Movie-App</h2>
+                <p className="card-top-title">Application mobile</p>
+                <h2 className="card-title">Movie App</h2>
               </div>
               <div>
                 <p className="technologies-title">Technologies</p>

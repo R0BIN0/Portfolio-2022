@@ -6,7 +6,7 @@ import { colors, fontSize, margin, padding } from "../../config/variables";
 
 export const CardBox = styled.div`
   width: 100%;
-  height: 275px;
+  height: 325px;
   margin-bottom: ${margin.MARGIN_4};
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -20,7 +20,6 @@ export const CardBox = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    font-size: ${fontSize.S};
     height: 400px;
     margin-bottom: ${margin.MARGIN_8};
     display: flex;
@@ -64,25 +63,26 @@ export const CardLeft = styled.div`
   padding: ${padding.PADDING_6};
   .card-top-title {
     color: ${colors.PRIMARY_LIGHT};
-    font-size: ${fontSize.S};
+    font-size: ${fontSize.XS};
     font-weight: 500;
     margin-bottom: ${margin.MARGIN_1};
   }
 
   .card-title {
     color: #fff;
-    font-size: ${fontSize.XXL};
+    font-size: ${fontSize.XL};
     font-weight: 700;
   }
 
   .technologies-title {
-    font-size: ${fontSize.S};
+    font-size: ${fontSize.XS};
+    margin-bottom: 0.25rem;
     color: #fff;
-    font-weight: 700;
+    font-weight: 500;
   }
 
   .icon-container {
-    width: 18px;
+    width: 16px;
     margin-right: ${margin.MARGIN_2};
   }
 `;
