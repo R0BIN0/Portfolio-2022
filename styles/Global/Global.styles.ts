@@ -34,7 +34,7 @@ export const Flex = styled.div<Flex>`
 
 // =================================== CONTAINER ===================================
 
-export const Container = styled.div<Container>`
+export const Container = styled.section<Container>`
   position: relative;
   width: 100%;
   height: 100%;

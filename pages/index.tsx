@@ -17,6 +17,7 @@ import {
 // Components
 import ButtonLink from "../components/ButtonLink/ButtonLink";
 import Card from "../components/Card/Card";
+import ButtonGithub from "../components/ButtonGithub/ButtonGithub";
 
 const Home: NextPage = () => {
   return (
@@ -52,6 +53,13 @@ const Home: NextPage = () => {
               ))}
             </Flex>
           </CardContainer>
+
+          <Flex justifyContent="center" alignItems="center" margin="2rem 0">
+            <ButtonGithub
+              txt="Plus de projets"
+              href="https://github.com/R0BIN0"
+            />
+          </Flex>
         </Container>
       </LineContainer>
     </>
