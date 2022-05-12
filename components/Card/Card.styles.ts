@@ -38,6 +38,7 @@ export const CardYear = styled.div`
   left: -135px;
 
   p {
+    color: ${colors.PRIMARY};
     height: 35px;
     font-size: ${fontSize.XXL};
     font-weight: 500;

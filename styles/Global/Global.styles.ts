@@ -1,6 +1,6 @@
 // General
 import styled from "styled-components";
-import { fontSize } from "../../config/variables";
+import { colors, fontSize } from "../../config/variables";
 
 //  Types
 
@@ -59,6 +59,7 @@ export const TitleContainer = styled.div<TitleContainer>`
 // =================================== TITLE ===================================
 
 export const Title = styled.h1`
+  color: ${colors.PRIMARY};
   font-size: ${fontSize.XL};
   font-weight: 500;
   line-height: 1.5;
