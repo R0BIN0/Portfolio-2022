@@ -4,13 +4,20 @@ import styled from "styled-components";
 // Variables
 import { colors, fontSize, margin, padding } from "../../config/variables";
 
-export const CardBox = styled.div`
+// Types
+
+type CardBox = {
+  backgroundColor: string;
+};
+
+export const CardBox = styled.div<CardBox>`
   width: 100%;
   height: 325px;
   margin-bottom: ${margin.MARGIN_4};
   display: grid;
   grid-template-columns: 300px 1fr;
-  background-color: ${colors.PRIMARY};
+  /* background-color: ${colors.PRIMARY}; */
+  background-color: ${({ backgroundColor }) => backgroundColor};
   cursor: pointer;
   transition: transform 200ms cubic-bezier(1, 0, 0, 1) 0ms;
 

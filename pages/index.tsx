@@ -1,5 +1,6 @@
 // General
 import type { NextPage } from "next";
+import { v4 as uuidv4 } from "uuid";
 
 // Styles
 import {
@@ -19,7 +20,26 @@ import ButtonLink from "../components/ButtonLink/ButtonLink";
 import Card from "../components/Card/Card";
 import ButtonGithub from "../components/ButtonGithub/ButtonGithub";
 
+import { projectsHome } from "../data/projects";
+import { FC } from "react";
+
+// Type
+
+type RenderList = {
+  filter: string;
+};
+
 const Home: NextPage = () => {
+  const RenderItems: FC<RenderList> = ({ filter }): JSX.Element => (
+    <>
+      {projectsHome
+        .filter((item) => item.year.includes(filter))
+        .map((item, i) => (
+          <Card key={uuidv4()} id={i} {...item} />
+        ))}
+    </>
+  );
+
   return (
     <>
       <LineContainer>
@@ -48,9 +68,10 @@ const Home: NextPage = () => {
               flexFlow={true}
               margin="4rem 0 0 0"
             >
-              {[...Array(3)].map((_, i) => (
-                <Card key={i} id={i} />
-              ))}
+              <RenderItems filter="2022" />
+              <div className="card-separation">
+                <RenderItems filter="2021" />
+              </div>
             </Flex>
           </CardContainer>
 
