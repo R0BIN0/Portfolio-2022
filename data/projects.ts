@@ -1,23 +1,12 @@
 // Images
-import { StaticImageData } from "next/image";
-
 import EtechImg from "../assets/images/Frame1.png";
 
 import React from "../assets/images/React.png";
 
 // Types
+import { ProjectHome } from "../config/types";
 
-type Props = {
-  href: string;
-  year: string;
-  type: string;
-  title: string;
-  technologies: StaticImageData[];
-  image?: StaticImageData;
-  backgroundColor: string;
-};
-
-export const projectsHome: Props[] = [
+export const projectsHome: ProjectHome[] = [
   {
     href: "portfolio",
     year: "2022",

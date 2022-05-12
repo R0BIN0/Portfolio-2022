@@ -33,7 +33,7 @@ const Card: FC<Props> = ({
 }) => {
   return (
     <>
-      <Link href={`/projet/${href}`}>
+      <Link href={`/${href}`}>
         <CardBox backgroundColor={backgroundColor}>
           {id === 0 && (
             <CardYear>
