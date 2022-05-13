@@ -1,16 +1,30 @@
-import { GetStaticPaths, GetStaticProps } from "next";
-import { projectsHome } from "../data/projects";
-import { ProjectHome } from "../config/types";
+// General
 import { FC } from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
+
+// Styles
+
+// Images
+
+// Components
+import TopProject from "../components/TopProject/TopProject";
+
+// Data
+import { projectsHome } from "../data/projects";
+
+// Types
+import { ProjectHome } from "../config/types";
 
 type Props = {
   obj: ProjectHome;
 };
 
 const project: FC<Props> = ({ obj }) => {
-  console.log(obj.href);
-
-  return <div>{obj.title}</div>;
+  return (
+    <>
+      <TopProject />
+    </>
+  );
 };
 
 export default project;

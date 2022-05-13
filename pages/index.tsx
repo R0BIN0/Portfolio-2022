@@ -1,4 +1,5 @@
 // General
+import { FC } from "react";
 import type { NextPage } from "next";
 import { v4 as uuidv4 } from "uuid";
 
@@ -8,20 +9,18 @@ import {
   TitleContainer,
   Title,
   Flex,
+  LineContainer,
 } from "../styles/Global/Global.styles";
 
-import {
-  LineContainer,
-  CardContainer,
-} from "../styles/PagesStyles/index.styles";
+import { CardContainer } from "../styles/PagesStyles/index.styles";
 
 // Components
 import ButtonLink from "../components/ButtonLink/ButtonLink";
 import Card from "../components/Card/Card";
 import ButtonGithub from "../components/ButtonGithub/ButtonGithub";
 
+// Data
 import { projectsHome } from "../data/projects";
-import { FC } from "react";
 
 // Type
 
