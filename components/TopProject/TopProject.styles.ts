@@ -13,6 +13,7 @@ export const ButtonBack = styled.a`
   font-weight: 500;
   color: ${colors.PRIMARY};
   z-index: 1000;
+  line-height: 0.8;
   padding: 0.75rem 1rem;
   border-radius: 50px;
 
