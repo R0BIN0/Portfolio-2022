@@ -75,6 +75,15 @@ export const Title = styled.h1`
   }
 `;
 
+// =================================== TEXT TITLE ===================================
+
+export const TextTitle = styled.h3`
+  color: ${colors.PRIMARY};
+  font-size: ${fontSize.MD};
+  font-weight: 700;
+  margin-bottom: 1rem;
+`;
+
 // =================================== TEXT ===================================
 
 export const Text = styled.p<Text>`

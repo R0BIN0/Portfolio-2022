@@ -6,6 +6,10 @@ import { colors, fontSize, margin, padding } from "../../config/variables";
 
 export const CustomButton = styled.a`
   display: inline-block;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 export const ButtonContent = styled.div`

@@ -65,7 +65,6 @@ const TopProject: FC = () => {
           placeholder="blur"
         />
       </ImageContainer>
-      <Container padding="20rem"></Container>
     </>
   );
 };
