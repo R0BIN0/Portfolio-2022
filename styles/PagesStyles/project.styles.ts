@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 // Variables
-import { margin } from "../../config/variables";
+import { colors, margin } from "../../config/variables";
 
 export const TextContainer = styled.div`
   width: 100%;
@@ -39,4 +39,29 @@ export const ButtonContainer = styled.div`
 export const IconContainer = styled.div`
   width: 30px;
   margin-right: ${margin.MARGIN_2};
+`;
+
+export const BackgroundVideo = styled.div`
+  width: 100%;
+  height: 700px;
+  padding: 2rem;
+  background-color: ${colors.PRIMARY};
+
+  video {
+    width: 100%;
+    max-width: 800px;
+    max-height: 500px;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 400px;
+
+    video {
+      max-height: 300px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    height: 300px;
+  }
 `;

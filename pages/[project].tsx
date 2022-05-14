@@ -15,10 +15,16 @@ import {
 import {
   TextContainer,
   ButtonContainer,
+  BackgroundVideo,
 } from "../styles/PagesStyles/project.styles";
 
 // Images
 import React from "../assets/images/React.png";
+
+// Videos
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+// const testVideo = require("../assets/videos/testportfolio.mp4");
 
 // Components
 import TopProject from "../components/TopProject/TopProject";
@@ -99,6 +105,20 @@ const project: FC<Props> = ({ obj }) => {
             <Image src={React} />
           </IconContainer>
         </Flex>
+      </Container>
+      <Container maxWidth="1500px" padding="0 0 6rem 0">
+        <BackgroundVideo>
+          <Flex justifyContent="center" alignItems="center">
+            <video autoPlay muted loop>
+              <source
+                type="video/mp4"
+                src={
+                  "https://res.cloudinary.com/e-tech-test/video/upload/v1652532636/testportfolio_k9rlbw.mp4"
+                }
+              />
+            </video>
+          </Flex>
+        </BackgroundVideo>
       </Container>
     </>
   );
