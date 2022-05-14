@@ -1,8 +1,9 @@
 // General
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
+import Link from "next/link";
 
 // Styles
 import {
@@ -20,25 +21,58 @@ import {
   SwitchProject,
   LinkProject,
 } from "../styles/PagesStyles/project.styles";
+import { IconContainer } from "../styles/PagesStyles/project.styles";
 
 // Components
 import TopProject from "../components/TopProject/TopProject";
 import ButtonGithub from "../components/ButtonGithub/ButtonGithub";
+import ButtonLink from "../components/ButtonLink/ButtonLink";
 
 // Data
 import projects from "../data/projects";
 
 // Types
 import { Project } from "../config/types";
-import ButtonLink from "../components/ButtonLink/ButtonLink";
-import { IconContainer } from "../styles/PagesStyles/project.styles";
-import Link from "next/link";
 
 type Props = {
   obj: Project;
 };
 
+type Switch = {
+  href: string;
+  switch: string;
+};
+
 const project: FC<Props> = ({ obj }) => {
+  // ========= find previous and next project ========= //
+
+  const [prev, setPrev] = useState<Switch | null>();
+  const [next, setNext] = useState<Switch | null>();
+
+  useEffect(() => {
+    if (obj) {
+      const goodIndex = projects.findIndex((item) => item.href === obj.href);
+
+      if (!projects[goodIndex - 1]) {
+        setPrev(null);
+      } else {
+        setPrev({
+          href: projects[goodIndex - 1].href,
+          switch: projects[goodIndex - 1].switch,
+        });
+      }
+
+      if (!projects[goodIndex + 1]) {
+        setNext(null);
+      } else {
+        setNext({
+          href: projects[goodIndex + 1].href,
+          switch: projects[goodIndex + 1].switch,
+        });
+      }
+    }
+  }, [obj]);
+
   return (
     <>
       <TopProject
@@ -93,22 +127,28 @@ const project: FC<Props> = ({ obj }) => {
           </LinkProject>
         </Flex>
         <Flex justifyContent="space-between" alignItems="center">
-          <Link href="/">
-            <SwitchProject textAlign="left">
-              <div>
-                <p>PROJET PRECEDENT</p>
-                <h4>E-Tech (site e-commerce)</h4>
-              </div>
-            </SwitchProject>
-          </Link>
-          <Link href="/">
-            <SwitchProject textAlign="right">
-              <div>
-                <p>PROJET SUIVANT</p>
-                <h4>E-Tech (site e-commerce)</h4>
-              </div>
-            </SwitchProject>
-          </Link>
+          {prev ? (
+            <Link href={prev.href}>
+              <SwitchProject textAlign="left">
+                <div>
+                  <p>PROJET PRECEDENT</p>
+                  <h4>{prev.switch}</h4>
+                </div>
+              </SwitchProject>
+            </Link>
+          ) : (
+            <div></div> // Div to make flex space-between work nicely in the first projet
+          )}
+          {next && (
+            <Link href={next.href}>
+              <SwitchProject textAlign="right">
+                <div>
+                  <p>PROJET SUIVANT</p>
+                  <h4>{next.switch}</h4>
+                </div>
+              </SwitchProject>
+            </Link>
+          )}
         </Flex>
       </Container>
     </>
