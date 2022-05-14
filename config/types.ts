@@ -6,6 +6,6 @@ export type ProjectHome = {
   type: string;
   title: string;
   technologies: StaticImageData[];
-  image?: StaticImageData;
+  image: StaticImageData;
   backgroundColor: string;
 };

@@ -13,6 +13,7 @@ export const projectsHome: ProjectHome[] = [
     type: "Site web",
     title: "Portfolio",
     technologies: [React, React, React, React],
+    image: EtechImg,
     backgroundColor: "#393A46",
   },
   {
@@ -21,6 +22,7 @@ export const projectsHome: ProjectHome[] = [
     type: "Application mobile",
     title: "Movie App",
     technologies: [React, React, React],
+    image: EtechImg,
     backgroundColor: "#463939",
   },
   {
@@ -29,6 +31,7 @@ export const projectsHome: ProjectHome[] = [
     type: "Mini projet",
     title: "Panier",
     technologies: [React, React, React],
+    image: EtechImg,
     backgroundColor: "#464639",
   },
   {

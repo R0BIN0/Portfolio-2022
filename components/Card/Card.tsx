@@ -17,7 +17,7 @@ type Props = {
   type: string;
   title: string;
   technologies: StaticImageData[];
-  image?: StaticImageData;
+  image: StaticImageData;
   backgroundColor: string;
 };
 
