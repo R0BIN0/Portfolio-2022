@@ -1,10 +1,118 @@
 // Images
-import EtechImg from "../assets/images/Frame1.png";
+import EtechImg from "../assets/images/Frame2.png";
 
+import PhotoShop from "../assets/images/PS.png";
 import React from "../assets/images/React.png";
+import Redux from "../assets/images/Redux.png";
+import Next from "../assets/images/Next.png";
+import JavaScript from "../assets/images/JS.png";
+import TypeScript from "../assets/images/TS.png";
+import StyledComponent from "../assets/images/StyledComponent.png";
+import FramerMotion from "../assets/images/FramerMotion.png";
+import Node from "../assets/images/Node.png";
+import Express from "../assets/images/Express.png";
+import Mongo from "../assets/images/Mongo.png";
+import Prettier from "../assets/images/Prettier.png";
+import ESLint from "../assets/images/ESLint.png";
+import Husky from "../assets/images/Husky.png";
+import AndroidStudio from "../assets/images/AndroidStudio.png";
 
 // Types
-import { ProjectHome } from "../config/types";
+import { Project, ProjectHome } from "../config/types";
+
+export const projects: Project[] = [
+  {
+    href: "portfolio",
+    switch: "Portfolio (site web)",
+    firstTitle: "PORTFOLIO TITLE",
+    site: "https://frozen-plains-30973.herokuapp.com/",
+    github: "",
+    description: "PORTFOLIO DESCRIPTION",
+    image:
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
+    technologies: [
+      Next,
+      TypeScript,
+      StyledComponent,
+      FramerMotion,
+      Prettier,
+      ESLint,
+      Husky,
+    ],
+    secondTitle: "SECOND TITLE PORTFOLIO",
+    role: "PORTFOLIO ROLE",
+    process: "PORTFOLIO PROCESS",
+    video:
+      "https://res.cloudinary.com/e-tech-test/video/upload/v1652532636/testportfolio_k9rlbw.mp4",
+    backgroundColor: "#393A46",
+  },
+  {
+    href: "mobile_app",
+    switch: "Movie App (application mobile)",
+    firstTitle: "MOBILE APP TITLE",
+    site: "https://frozen-plains-30973.herokuapp.com/",
+    github: "",
+    description: "MOBILLE APP DESCRIPTION",
+    image:
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
+    technologies: [React, TypeScript, Prettier, ESLint, AndroidStudio],
+    secondTitle: "SECOND TITLE MOBILLE APP",
+    role: "MOBILLE APP ROLE",
+    process: "MOBILLE APP PROCESS",
+    video:
+      "https://res.cloudinary.com/e-tech-test/video/upload/v1652532636/testportfolio_k9rlbw.mp4",
+    backgroundColor: "#463939",
+  },
+
+  {
+    href: "panier",
+    switch: "Panier (mini projet)",
+    firstTitle: "PANIER TITLE",
+    site: "https://frozen-plains-30973.herokuapp.com/",
+    github: "",
+    description: "PANIER DESCRIPTION",
+    image:
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
+    technologies: [React, JavaScript, Prettier, ESLint],
+    secondTitle: "SECOND TITLE PANIER",
+    role: "PANIER ROLE",
+    process: "PANIER PROCESS",
+    video:
+      "https://res.cloudinary.com/e-tech-test/video/upload/v1652532636/testportfolio_k9rlbw.mp4",
+    backgroundColor: "#464639",
+  },
+
+  {
+    href: "e_tech",
+    switch: "E-tech (site e-commerce)",
+    firstTitle:
+      "E-Tech est un site e-commerce fictif de ventes de produits et périphériques d’ordinateur.",
+    site: "https://frozen-plains-30973.herokuapp.com/",
+    github: "",
+    description:
+      "Le but de ce projet a été d'apprendre à manipuler les différents aspects de la programmation web : faire interagir le Front-end avec le Back-end et une base de données mais également d'améliorer mon autonomie face aux difficultés rencontrées.",
+    image:
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
+    technologies: [
+      PhotoShop,
+      React,
+      JavaScript,
+      Redux,
+      FramerMotion,
+      Node,
+      Express,
+      Mongo,
+    ],
+    secondTitle:
+      "E-Tech représentait un énorme défi pour moi, n’ayant aucune notion de développement “back-end” Je me lançais un peu dans l’inconnu.",
+    role: "Le but de ce projet a été d'apprendre à manipuler les différents aspects de la programmation web : faire interagir le Front-end avec le Back-end et une base de données mais également d'améliorer mon autonomie face aux difficultés rencontrées.",
+    process:
+      "Le but de ce projet a été d'apprendre à manipuler les différents aspects de la programmation web : faire interagir le Front-end avec le Back-end et une base de données mais également d'améliorer mon autonomie face aux difficultés rencontrées.",
+    video:
+      "https://res.cloudinary.com/e-tech-test/video/upload/v1652532636/testportfolio_k9rlbw.mp4",
+    backgroundColor: "#393D46",
+  },
+];
 
 export const projectsHome: ProjectHome[] = [
   {
@@ -12,7 +120,15 @@ export const projectsHome: ProjectHome[] = [
     year: "2022",
     type: "Site web",
     title: "Portfolio",
-    technologies: [React, React, React, React],
+    technologies: [
+      Next,
+      TypeScript,
+      StyledComponent,
+      FramerMotion,
+      Prettier,
+      ESLint,
+      Husky,
+    ],
     image: EtechImg,
     backgroundColor: "#393A46",
   },
@@ -21,7 +137,7 @@ export const projectsHome: ProjectHome[] = [
     year: "2022",
     type: "Application mobile",
     title: "Movie App",
-    technologies: [React, React, React],
+    technologies: [React, TypeScript, Prettier, ESLint, AndroidStudio],
     image: EtechImg,
     backgroundColor: "#463939",
   },
@@ -30,7 +146,7 @@ export const projectsHome: ProjectHome[] = [
     year: "2022",
     type: "Mini projet",
     title: "Panier",
-    technologies: [React, React, React],
+    technologies: [React, JavaScript, Prettier, ESLint],
     image: EtechImg,
     backgroundColor: "#464639",
   },
@@ -39,8 +155,19 @@ export const projectsHome: ProjectHome[] = [
     year: "2021",
     type: "Site e-commerce",
     title: "E-tech",
-    technologies: [React, React],
+    technologies: [
+      PhotoShop,
+      React,
+      JavaScript,
+      Redux,
+      FramerMotion,
+      Node,
+      Express,
+      Mongo,
+    ],
     image: EtechImg,
     backgroundColor: "#393D46",
   },
 ];
+
+export default projects;

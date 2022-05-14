@@ -14,13 +14,19 @@ import {
 } from "../../styles/Global/Global.styles";
 import { ButtonBack, ImageContainer } from "./TopProject.styles";
 
-// Images
-import photoTest from "../../assets/images/Frame2.png";
-
 // Components
 import ButtonLink from "../ButtonLink/ButtonLink";
 
-const TopProject: FC = () => {
+// Types
+
+type Props = {
+  firstTitle: string;
+  site: string;
+  description: string;
+  image: string;
+};
+
+const TopProject: FC<Props> = ({ firstTitle, site, description, image }) => {
   return (
     <>
       <LineContainer>
@@ -33,36 +39,31 @@ const TopProject: FC = () => {
           </div>
         </div>
 
-        <Link href="/">
+        <Link href={site}>
           <ButtonBack>Retour</ButtonBack>
         </Link>
 
         <Container maxWidth="1024px" padding="6rem">
           <TitleContainer>
-            <Title>
-              E-Tech est un site e-commerce fictif de ventes de produits et
-              périphériques d’ordinateur.
-            </Title>
+            <Title>{firstTitle}</Title>
             <ButtonLink txt="Visiter le site" href="/me" />
           </TitleContainer>
           <Text margin="2.5rem 0 0 0" maxWidth="525px">
-            Le but de ce projet a été d&apos;apprendre à manipuler les
-            différents aspects de la programmation web : faire interagir le
-            Front-end avec le Back-end et une base de données mais également
-            d&apos;améliorer mon autonomie face aux difficultés rencontrées.
+            {description}
           </Text>
         </Container>
       </LineContainer>
       <ImageContainer>
         <Image
-          src={photoTest}
-          width={photoTest.width}
-          height={photoTest.height}
+          src={image}
+          width={1920}
+          height={1080}
           layout="fill"
           objectFit="cover"
           quality={75}
           priority={true}
           placeholder="blur"
+          blurDataURL="red"
         />
       </ImageContainer>
     </>

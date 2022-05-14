@@ -6,6 +6,10 @@ import { colors, fontSize, margin } from "../../config/variables";
 
 // Types
 
+type BackgroundVideo = {
+  backgroundColor: string;
+};
+
 type SwitchProject = {
   textAlign: string;
 };
@@ -47,11 +51,11 @@ export const IconContainer = styled.div`
   margin-right: ${margin.MARGIN_2};
 `;
 
-export const BackgroundVideo = styled.div`
+export const BackgroundVideo = styled.div<BackgroundVideo>`
   width: 100%;
   height: 700px;
   padding: 2rem;
-  background-color: ${colors.PRIMARY};
+  background-color: ${({ backgroundColor }) => backgroundColor};
 
   video {
     width: 100%;
