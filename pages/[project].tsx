@@ -16,6 +16,8 @@ import {
   TextContainer,
   ButtonContainer,
   BackgroundVideo,
+  SwitchProject,
+  LinkProject,
 } from "../styles/PagesStyles/project.styles";
 
 // Images
@@ -37,6 +39,7 @@ import { projectsHome } from "../data/projects";
 import { ProjectHome } from "../config/types";
 import ButtonLink from "../components/ButtonLink/ButtonLink";
 import { IconContainer } from "../styles/PagesStyles/project.styles";
+import Link from "next/link";
 
 type Props = {
   obj: ProjectHome;
@@ -119,6 +122,33 @@ const project: FC<Props> = ({ obj }) => {
             </video>
           </Flex>
         </BackgroundVideo>
+      </Container>
+      <Container maxWidth="1500px" padding="6rem 0">
+        <Flex justifyContent="center" alignItems="center">
+          <LinkProject>
+            <Link href="/">
+              <a>Visiter le site</a>
+            </Link>
+          </LinkProject>
+        </Flex>
+        <Flex justifyContent="space-between" alignItems="center">
+          <Link href="/">
+            <SwitchProject textAlign="left">
+              <div>
+                <p>PROJET PRECEDENT</p>
+                <h4>E-Tech (site e-commerce)</h4>
+              </div>
+            </SwitchProject>
+          </Link>
+          <Link href="/">
+            <SwitchProject textAlign="right">
+              <div>
+                <p>PROJET SUIVANT</p>
+                <h4>E-Tech (site e-commerce)</h4>
+              </div>
+            </SwitchProject>
+          </Link>
+        </Flex>
       </Container>
     </>
   );

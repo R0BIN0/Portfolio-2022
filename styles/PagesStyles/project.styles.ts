@@ -2,7 +2,13 @@
 import styled from "styled-components";
 
 // Variables
-import { colors, margin } from "../../config/variables";
+import { colors, fontSize, margin } from "../../config/variables";
+
+// Types
+
+type SwitchProject = {
+  textAlign: string;
+};
 
 export const TextContainer = styled.div`
   width: 100%;
@@ -63,5 +69,38 @@ export const BackgroundVideo = styled.div`
 
   @media screen and (max-width: 500px) {
     height: 300px;
+  }
+`;
+
+export const SwitchProject = styled.div<SwitchProject>`
+  text-align: ${({ textAlign }) => textAlign};
+  color: ${colors.PRIMARY_LIGHT};
+  cursor: pointer;
+  padding: 0 2rem;
+
+  &:hover {
+    color: ${colors.PRIMARY};
+  }
+
+  p {
+    font-size: ${fontSize.XS};
+  }
+
+  h4 {
+    font-size: ${fontSize.MD};
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: ${fontSize.S};
+  }
+`;
+
+export const LinkProject = styled.div`
+  margin: 0 0 6rem 0;
+  a {
+    color: ${colors.CTA};
+    font-weight: 500;
+    text-decoration: underline;
   }
 `;
