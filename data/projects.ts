@@ -10,7 +10,6 @@ import TypeScript from "../assets/images/TS.png";
 import StyledComponent from "../assets/images/StyledComponent.png";
 import FramerMotion from "../assets/images/FramerMotion.png";
 import Node from "../assets/images/Node.png";
-import Express from "../assets/images/Express.png";
 import Mongo from "../assets/images/Mongo.png";
 import Prettier from "../assets/images/Prettier.png";
 import ESLint from "../assets/images/ESLint.png";
@@ -100,7 +99,6 @@ export const projects: Project[] = [
       Redux,
       FramerMotion,
       Node,
-      Express,
       Mongo,
     ],
     secondTitle:
@@ -162,7 +160,6 @@ export const projectsHome: ProjectHome[] = [
       Redux,
       FramerMotion,
       Node,
-      Express,
       Mongo,
     ],
     image: EtechImg,
