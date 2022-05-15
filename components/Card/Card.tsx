@@ -1,5 +1,5 @@
 // General
-import { FC } from "react";
+import { FC, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 // Styles
 import { CardBox, CardYear, CardLeft, CardRight } from "./Card.styles";
 import { Flex } from "../../styles/Global/Global.styles";
+import ImgLoader from "../ImgLoader/ImgLoader";
 
 // Types
 
@@ -31,6 +32,8 @@ const Card: FC<Props> = ({
   image,
   backgroundColor,
 }) => {
+  const [imgLoad, setImgLoad] = useState(false);
+
   return (
     <>
       <Link href={`/${href}`}>
@@ -67,14 +70,17 @@ const Card: FC<Props> = ({
           </CardLeft>
           <CardRight>
             <div className="img-container">
+              {imgLoad && <ImgLoader backgroundColor={backgroundColor} />}
               {image && (
                 <Image
                   src={image}
+                  alt="pages des différents projets"
                   width={image.width}
                   height={image.height}
                   layout="fill"
                   objectFit="cover"
-                  quality={50}
+                  quality={20}
+                  onLoadingComplete={() => setImgLoad(true)}
                 />
               )}
             </div>

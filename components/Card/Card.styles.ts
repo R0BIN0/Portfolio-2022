@@ -16,7 +16,6 @@ export const CardBox = styled.div<CardBox>`
   margin-bottom: ${margin.MARGIN_4};
   display: grid;
   grid-template-columns: 300px 1fr;
-  /* background-color: ${colors.PRIMARY}; */
   background-color: ${({ backgroundColor }) => backgroundColor};
   cursor: pointer;
   transition: transform 200ms cubic-bezier(1, 0, 0, 1) 0ms;
@@ -101,7 +100,6 @@ export const CardRight = styled.div`
   position: relative;
 
   .img-container {
-    background-color: blanchedalmond;
     width: 100%;
     height: 100%;
     position: relative;
