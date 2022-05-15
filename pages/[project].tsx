@@ -80,6 +80,7 @@ const project: FC<Props> = ({ obj }) => {
         site={obj.site}
         description={obj.description}
         image={obj.image}
+        backgroundColor={obj.backgroundColor}
       />
       <Container maxWidth="1024px" padding="6rem">
         <TitleContainer>

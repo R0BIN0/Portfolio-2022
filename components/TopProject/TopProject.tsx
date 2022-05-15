@@ -1,5 +1,5 @@
 // General
-import { FC } from "react";
+import { FC, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -24,9 +24,18 @@ type Props = {
   site: string;
   description: string;
   image: string;
+  backgroundColor: string;
 };
 
-const TopProject: FC<Props> = ({ firstTitle, site, description, image }) => {
+const TopProject: FC<Props> = ({
+  firstTitle,
+  site,
+  description,
+  image,
+  backgroundColor,
+}) => {
+  const [imgLoad, setImgLoad] = useState(false);
+
   return (
     <>
       <LineContainer>
@@ -53,17 +62,28 @@ const TopProject: FC<Props> = ({ firstTitle, site, description, image }) => {
           </Text>
         </Container>
       </LineContainer>
-      <ImageContainer>
+      <ImageContainer backgroundColor={backgroundColor}>
+        {!imgLoad && (
+          <div className="img-loader">
+            <Flex justifyContent="center" alignItems="center">
+              <div className="loader">
+                <div className="rect1"></div>
+                <div className="rect2"></div>
+                <div className="rect3"></div>
+                <div className="rect4"></div>
+                <div className="rect5"></div>
+              </div>
+            </Flex>
+          </div>
+        )}
         <Image
           src={image}
-          width={1920}
-          height={1080}
+          alt="pages des différents projets"
           layout="fill"
           objectFit="cover"
-          quality={75}
-          priority={true}
-          placeholder="blur"
-          blurDataURL="red"
+          quality={50}
+          priority
+          onLoadingComplete={() => setImgLoad(true)}
         />
       </ImageContainer>
     </>
