@@ -16,6 +16,7 @@ import { ButtonBack, ImageContainer } from "./TopProject.styles";
 
 // Components
 import ButtonLink from "../ButtonLink/ButtonLink";
+import ImgLoader from "../ImgLoader/ImgLoader";
 
 // Types
 
@@ -62,20 +63,8 @@ const TopProject: FC<Props> = ({
           </Text>
         </Container>
       </LineContainer>
-      <ImageContainer backgroundColor={backgroundColor}>
-        {!imgLoad && (
-          <div className="img-loader">
-            <Flex justifyContent="center" alignItems="center">
-              <div className="loader">
-                <div className="rect1"></div>
-                <div className="rect2"></div>
-                <div className="rect3"></div>
-                <div className="rect4"></div>
-                <div className="rect5"></div>
-              </div>
-            </Flex>
-          </div>
-        )}
+      <ImageContainer>
+        {!imgLoad && <ImgLoader backgroundColor={backgroundColor} />}
         <Image
           src={image}
           alt="pages des différents projets"
