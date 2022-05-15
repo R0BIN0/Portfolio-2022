@@ -47,8 +47,8 @@ export const ButtonContainer = styled.div`
 `;
 
 export const IconContainer = styled.div`
-  width: 30px;
-  margin-right: ${margin.MARGIN_2};
+  width: 27.5px;
+  margin-right: ${margin.MARGIN_4};
 `;
 
 export const BackgroundVideo = styled.div<BackgroundVideo>`

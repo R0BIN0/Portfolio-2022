@@ -39,14 +39,14 @@ const TopProject: FC<Props> = ({ firstTitle, site, description, image }) => {
           </div>
         </div>
 
-        <Link href={site}>
+        <Link href="/">
           <ButtonBack>Retour</ButtonBack>
         </Link>
 
         <Container maxWidth="1024px" padding="6rem">
           <TitleContainer>
             <Title>{firstTitle}</Title>
-            <ButtonLink txt="Visiter le site" href="/me" />
+            <ButtonLink txt="Visiter le site" href={site} />
           </TitleContainer>
           <Text margin="2.5rem 0 0 0" maxWidth="525px">
             {description}
