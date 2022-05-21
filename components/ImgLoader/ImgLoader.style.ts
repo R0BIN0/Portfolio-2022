@@ -4,7 +4,7 @@ import styled from "styled-components";
 // Types
 
 type Loader = {
-  backgroundColor: string;
+  backgroundColor?: string;
 };
 
 export const Loader = styled.div<Loader>`

@@ -40,11 +40,7 @@ const TopProject: FC<TopProjectProps> = ({
         left: 0,
         transform: "translateY(100vh)",
       },
-
       exit: {
-        position: "fixed",
-        top: 0,
-        left: 0,
         transform: "translateY(0vh)",
         transition: {
           duration: 1.5,

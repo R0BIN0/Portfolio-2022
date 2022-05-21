@@ -4,7 +4,7 @@ import { Flex } from "../../styles/Global/Global.styles";
 import { Loader } from "./ImgLoader.style";
 
 type Props = {
-  backgroundColor: string;
+  backgroundColor?: string;
 };
 
 const ImgLoader: FC<Props> = ({ backgroundColor }) => {

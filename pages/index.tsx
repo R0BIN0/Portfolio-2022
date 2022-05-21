@@ -1,8 +1,8 @@
 // General
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import type { NextPage } from "next";
 import { v4 as uuidv4 } from "uuid";
-import { useRouter } from "next/router";
+import { Variants } from "framer-motion";
 
 // Styles
 import {
@@ -11,6 +11,7 @@ import {
   Title,
   Flex,
   LineContainer,
+  PageTransition,
 } from "../styles/Global/Global.styles";
 
 import { CardContainer } from "../styles/PagesStyles/index.styles";
@@ -26,13 +27,32 @@ import TopProject from "../components/TopProject/TopProject";
 
 // Type
 import { TopProjectProps } from "../config/types";
+import ImgLoader from "../components/ImgLoader/ImgLoader";
 
 type RenderList = {
   filter: string;
 };
 
 const Home: NextPage = () => {
-  const { pathname } = useRouter();
+  const ease = [0.7, 0, 0.15, 1];
+
+  const animation: Variants = {
+    show: {
+      position: "fixed",
+      top: 0,
+      left: 0,
+      transform: "translateY(0vh) skewY(0deg)",
+    },
+    hidden: {
+      transform: "translateY(-120vh) skewY(-10deg)",
+      transition: {
+        duration: 1,
+        ease: ease,
+      },
+    },
+  };
+
+  // ========= render list of items ========= //
 
   const [clickedProject, setClickedProject] = useState<TopProjectProps>();
 
@@ -45,7 +65,6 @@ const Home: NextPage = () => {
       <>
         {projectsHome
           .filter((item) => item.year.includes(filter))
-
           .map((item, i) => (
             <div
               key={uuidv4()}
@@ -78,6 +97,12 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <PageTransition initial="show" animate="hidden" variants={animation}>
+        <Flex justifyContent="center" alignItems="center">
+          <ImgLoader />
+        </Flex>
+      </PageTransition>
+
       <LineContainer>
         <div className="line-border">
           <div className="line-absolute">
@@ -120,7 +145,11 @@ const Home: NextPage = () => {
         </Container>
       </LineContainer>
 
-      {clickedProject && <TopProject {...clickedProject} route={pathname} />}
+      {clickedProject && (
+        <>
+          <TopProject {...clickedProject} route={true} />
+        </>
+      )}
     </>
   );
 };

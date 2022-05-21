@@ -35,5 +35,5 @@ export type TopProjectProps = {
   description: string;
   image: string;
   backgroundColor: string;
-  route?: string;
+  route?: boolean;
 };

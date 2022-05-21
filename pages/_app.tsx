@@ -17,7 +17,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         <div key={router.route}>
           <GlobalStyle />
           {pathname !== "/[project]" && <Navbar />}
-          {/* <Navbar /> */}
           <Component {...pageProps} />
         </div>
       </AnimatePresence>

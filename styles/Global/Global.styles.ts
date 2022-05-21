@@ -1,4 +1,5 @@
 // General
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { colors, fontSize } from "../../config/variables";
 
@@ -159,4 +160,13 @@ export const LineContainer = styled.div`
     transform-origin: 100% 0%;
     border-radius: 30px;
   }
+`;
+
+// =================================== PAGE TRANSITION ===================================
+
+export const PageTransition = styled(motion.div)`
+  width: 100%;
+  height: 100vh;
+  background-color: ${colors.PRIMARY};
+  z-index: 10000;
 `;

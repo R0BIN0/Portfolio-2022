@@ -4,11 +4,13 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 import Link from "next/link";
+import { motion, Variants } from "framer-motion";
 
 // Styles
 import {
   Container,
   Flex,
+  PageTransition,
   Text,
   TextTitle,
   Title,
@@ -27,6 +29,7 @@ import { IconContainer } from "../styles/PagesStyles/project.styles";
 import TopProject from "../components/TopProject/TopProject";
 import ButtonGithub from "../components/ButtonGithub/ButtonGithub";
 import ButtonLink from "../components/ButtonLink/ButtonLink";
+import ImgLoader from "../components/ImgLoader/ImgLoader";
 
 // Data
 import projects from "../data/projects";
@@ -44,6 +47,24 @@ type Switch = {
 };
 
 const project: FC<Props> = ({ obj }) => {
+  const ease = [0.7, 0, 0.15, 1];
+
+  const animation: Variants = {
+    hidden: {
+      position: "fixed",
+      top: 0,
+      left: 0,
+      transform: "translateY(120vh) skewY(10deg)",
+    },
+    exit: {
+      transform: "translateY(0vh) skewY(0deg)",
+      transition: {
+        duration: 1,
+        ease: ease,
+      },
+    },
+  };
+
   // ========= find previous and next project ========= //
 
   const [prev, setPrev] = useState<Switch | null>();
@@ -75,6 +96,15 @@ const project: FC<Props> = ({ obj }) => {
 
   return (
     <>
+      <motion.div
+        exit={{ opacity: 0, transition: { duration: 2 } }}
+      ></motion.div>
+      <PageTransition initial="hidden" exit="exit" variants={animation}>
+        <Flex justifyContent="center" alignItems="center">
+          <ImgLoader />
+        </Flex>
+      </PageTransition>
+
       <TopProject
         firstTitle={obj.firstTitle}
         site={obj.site}
