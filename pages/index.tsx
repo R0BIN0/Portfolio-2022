@@ -1,7 +1,8 @@
 // General
-import { FC } from "react";
+import { FC, useState } from "react";
 import type { NextPage } from "next";
 import { v4 as uuidv4 } from "uuid";
+import { useRouter } from "next/router";
 
 // Styles
 import {
@@ -21,23 +22,59 @@ import ButtonGithub from "../components/ButtonGithub/ButtonGithub";
 
 // Data
 import { projectsHome } from "../data/projects";
+import TopProject from "../components/TopProject/TopProject";
 
 // Type
+import { TopProjectProps } from "../config/types";
 
 type RenderList = {
   filter: string;
 };
 
 const Home: NextPage = () => {
-  const RenderItems: FC<RenderList> = ({ filter }): JSX.Element => (
-    <>
-      {projectsHome
-        .filter((item) => item.year.includes(filter))
-        .map((item, i) => (
-          <Card key={uuidv4()} id={i} {...item} />
-        ))}
-    </>
-  );
+  const { pathname } = useRouter();
+
+  const [clickedProject, setClickedProject] = useState<TopProjectProps>();
+
+  const RenderItems: FC<RenderList> = ({ filter }): JSX.Element => {
+    const clickedProjectFunc = (obj: TopProjectProps): void => {
+      setClickedProject(obj);
+    };
+
+    return (
+      <>
+        {projectsHome
+          .filter((item) => item.year.includes(filter))
+
+          .map((item, i) => (
+            <div
+              key={uuidv4()}
+              onClick={() =>
+                clickedProjectFunc({
+                  firstTitle: item.firstTitle,
+                  site: item.site,
+                  description: item.description,
+                  backgroundColor: item.backgroundColor,
+                  image: item.image,
+                })
+              }
+              style={{ width: "100%" }}
+            >
+              <Card
+                id={i}
+                href={item.href}
+                year={item.year}
+                type={item.type}
+                title={item.title}
+                technologies={item.technologies}
+                image={item.image}
+                backgroundColor={item.backgroundColor}
+              />
+            </div>
+          ))}
+      </>
+    );
+  };
 
   return (
     <>
@@ -82,6 +119,8 @@ const Home: NextPage = () => {
           </Flex>
         </Container>
       </LineContainer>
+
+      {clickedProject && <TopProject {...clickedProject} route={pathname} />}
     </>
   );
 };

@@ -22,6 +22,18 @@ export type ProjectHome = {
   type: string;
   title: string;
   technologies: StaticImageData[];
-  image: StaticImageData;
+  image: string;
   backgroundColor: string;
+  firstTitle: string;
+  site: string;
+  description: string;
+};
+
+export type TopProjectProps = {
+  firstTitle: string;
+  site: string;
+  description: string;
+  image: string;
+  backgroundColor: string;
+  route?: string;
 };

@@ -18,7 +18,7 @@ type Props = {
   type: string;
   title: string;
   technologies: StaticImageData[];
-  image: StaticImageData;
+  image: string;
   backgroundColor: string;
 };
 
@@ -75,8 +75,6 @@ const Card: FC<Props> = ({
                 <Image
                   src={image}
                   alt="pages des différents projets"
-                  width={image.width}
-                  height={image.height}
                   layout="fill"
                   objectFit="cover"
                   quality={20}

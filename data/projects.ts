@@ -1,5 +1,4 @@
 // Images
-import EtechImg from "../assets/images/Frame2.png";
 
 import PhotoShop from "../assets/images/PS.png";
 import React from "../assets/images/React.png";
@@ -118,6 +117,8 @@ export const projectsHome: ProjectHome[] = [
     year: "2022",
     type: "Site web",
     title: "Portfolio",
+    image:
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
     technologies: [
       Next,
       TypeScript,
@@ -127,8 +128,10 @@ export const projectsHome: ProjectHome[] = [
       ESLint,
       Husky,
     ],
-    image: EtechImg,
     backgroundColor: "#393A46",
+    firstTitle: "PORTFOLIO TITLE",
+    site: "https://frozen-plains-30973.herokuapp.com/",
+    description: "PORTFOLIO DESCRIPTION",
   },
   {
     href: "mobile_app",
@@ -136,8 +139,12 @@ export const projectsHome: ProjectHome[] = [
     type: "Application mobile",
     title: "Movie App",
     technologies: [React, TypeScript, Prettier, ESLint, AndroidStudio],
-    image: EtechImg,
+    image:
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
     backgroundColor: "#463939",
+    firstTitle: "MOBILE APP TITLE",
+    site: "https://frozen-plains-30973.herokuapp.com/",
+    description: "MOBILLE APP DESCRIPTION",
   },
   {
     href: "panier",
@@ -145,14 +152,20 @@ export const projectsHome: ProjectHome[] = [
     type: "Mini projet",
     title: "Panier",
     technologies: [React, JavaScript, Prettier, ESLint],
-    image: EtechImg,
+    image:
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
     backgroundColor: "#464639",
+    firstTitle: "PANIER TITLE",
+    site: "https://frozen-plains-30973.herokuapp.com/",
+    description: "PANIER DESCRIPTION",
   },
   {
     href: "e_tech",
     year: "2021",
     type: "Site e-commerce",
     title: "E-tech",
+    image:
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
     technologies: [
       PhotoShop,
       React,
@@ -162,8 +175,12 @@ export const projectsHome: ProjectHome[] = [
       Node,
       Mongo,
     ],
-    image: EtechImg,
     backgroundColor: "#393D46",
+    firstTitle:
+      "E-Tech est un site e-commerce fictif de ventes de produits et périphériques d’ordinateur.",
+    site: "https://frozen-plains-30973.herokuapp.com/",
+    description:
+      "Le but de ce projet a été d'apprendre à manipuler les différents aspects de la programmation web : faire interagir le Front-end avec le Back-end et une base de données mais également d'améliorer mon autonomie face aux difficultés rencontrées.",
   },
 ];
 

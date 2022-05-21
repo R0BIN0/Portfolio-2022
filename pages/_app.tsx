@@ -14,9 +14,12 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <AnimatePresence exitBeforeEnter>
-        <GlobalStyle />
-        {pathname !== "/[project]" && <Navbar />}
-        <Component {...pageProps} key={router.route} />
+        <div key={router.route}>
+          <GlobalStyle />
+          {pathname !== "/[project]" && <Navbar />}
+          {/* <Navbar /> */}
+          <Component {...pageProps} />
+        </div>
       </AnimatePresence>
     </>
   );

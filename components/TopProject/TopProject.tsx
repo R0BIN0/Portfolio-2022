@@ -2,6 +2,7 @@
 import { FC, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 
 // Styles
 import {
@@ -19,26 +20,49 @@ import ButtonLink from "../ButtonLink/ButtonLink";
 import ImgLoader from "../ImgLoader/ImgLoader";
 
 // Types
+import { TopProjectProps } from "../../config/types";
 
-type Props = {
-  firstTitle: string;
-  site: string;
-  description: string;
-  image: string;
-  backgroundColor: string;
-};
-
-const TopProject: FC<Props> = ({
+const TopProject: FC<TopProjectProps> = ({
   firstTitle,
   site,
   description,
   image,
   backgroundColor,
+  route,
 }) => {
+  const ease = [0.7, 0, 0.15, 1];
+
+  const animation: Variants = {
+    ...(route && {
+      hidden: {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        transform: "translateY(100vh)",
+      },
+
+      exit: {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        transform: "translateY(0vh)",
+        transition: {
+          duration: 1.5,
+          ease: ease,
+        },
+      },
+    }),
+  };
+
   const [imgLoad, setImgLoad] = useState(false);
 
   return (
-    <>
+    <motion.div
+      initial="hidden"
+      exit="exit"
+      variants={animation}
+      style={{ width: "100%", backgroundColor: "#FFF", zIndex: 1000 }}
+    >
       <LineContainer>
         <div className="line-border">
           <div className="line-absolute">
@@ -75,7 +99,7 @@ const TopProject: FC<Props> = ({
           onLoadingComplete={() => setImgLoad(true)}
         />
       </ImageContainer>
-    </>
+    </motion.div>
   );
 };
 
