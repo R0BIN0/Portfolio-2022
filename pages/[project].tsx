@@ -54,7 +54,7 @@ const project: FC<Props> = ({ obj }) => {
       position: "fixed",
       top: 0,
       left: 0,
-      transform: "translateY(120vh) skewY(10deg)",
+      transform: "translateY(120vh) skewY(5deg)",
     },
     exit: {
       transform: "translateY(0vh) skewY(0deg)",

@@ -1,5 +1,5 @@
 // General
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import type { NextPage } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { Variants } from "framer-motion";
@@ -14,7 +14,10 @@ import {
   PageTransition,
 } from "../styles/Global/Global.styles";
 
-import { CardContainer } from "../styles/PagesStyles/index.styles";
+import {
+  CardContainer,
+  LittleLoader,
+} from "../styles/PagesStyles/index.styles";
 
 // Components
 import ButtonLink from "../components/ButtonLink/ButtonLink";
@@ -44,9 +47,32 @@ const Home: NextPage = () => {
       transform: "translateY(0vh) skewY(0deg)",
     },
     hidden: {
-      transform: "translateY(-120vh) skewY(-10deg)",
+      transform: "translateY(-120vh) skewY(-5deg)",
       transition: {
         duration: 1,
+        ease: ease,
+      },
+    },
+  };
+
+  const loader: Variants = {
+    hidden: {
+      transform: "translateY(10px)",
+      opacity: 0,
+    },
+    show: {
+      transform: "translateY(0px)",
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: ease,
+      },
+    },
+    exit: {
+      transform: "translateY(10px)",
+      opacity: 0,
+      transition: {
+        duration: 0.5,
         ease: ease,
       },
     },
@@ -148,6 +174,16 @@ const Home: NextPage = () => {
       {clickedProject && (
         <>
           <TopProject {...clickedProject} route={true} />
+          <LittleLoader
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            variants={loader}
+          >
+            <Flex justifyContent="center" alignItems="center">
+              <div className="little-loader"></div>
+            </Flex>
+          </LittleLoader>
         </>
       )}
     </>
