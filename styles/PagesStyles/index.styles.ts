@@ -15,6 +15,14 @@ export const CardContainer = styled.div`
   }
 `;
 
+export const DarkBackground = styled(motion.div)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+`;
+
 export const LittleLoader = styled(motion.div)`
   position: fixed;
   top: 2rem;

@@ -2,7 +2,7 @@
 import { FC, useEffect, useState } from "react";
 import type { NextPage } from "next";
 import { v4 as uuidv4 } from "uuid";
-import { Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 // Styles
 import {
@@ -16,6 +16,7 @@ import {
 
 import {
   CardContainer,
+  DarkBackground,
   LittleLoader,
 } from "../styles/PagesStyles/index.styles";
 
@@ -89,13 +90,32 @@ const Home: NextPage = () => {
     },
   };
 
+  const darkBackground: Variants = {
+    hidden: {
+      backgroundColor: "rgba(0, 0, 0, 0)",
+    },
+    show: {
+      backgroundColor: "rgba(0, 0, 0, 0.3)",
+
+      transition: {
+        duration: 2,
+        ease: ease,
+      },
+    },
+  };
+
   // ========= render list of items ========= //
+
+  useEffect(() => {
+    document.body.style.pointerEvents = "all";
+  }, []);
 
   const [clickedProject, setClickedProject] = useState<TopProjectProps>();
 
   const RenderItems: FC<RenderList> = ({ filter }): JSX.Element => {
     const clickedProjectFunc = (obj: TopProjectProps): void => {
       setClickedProject(obj);
+      document.body.style.pointerEvents = "none";
     };
 
     return (
@@ -185,6 +205,11 @@ const Home: NextPage = () => {
       {clickedProject && (
         <>
           <TopProject {...clickedProject} route={true} />
+          <DarkBackground
+            initial="hidden"
+            animate="show"
+            variants={darkBackground}
+          ></DarkBackground>
           <LittleLoader
             initial="hidden"
             animate="show"
@@ -192,7 +217,7 @@ const Home: NextPage = () => {
             variants={loader}
           >
             <Flex justifyContent="center" alignItems="center">
-              <div className="little-loader"></div>
+              <motion.div className="little-loader"></motion.div>
             </Flex>
           </LittleLoader>
         </>

@@ -41,13 +41,12 @@ type Props = {
   obj: Project;
 };
 
-type Switch = {
-  href: string;
-  switch: string;
-};
-
 const project: FC<Props> = ({ obj }) => {
   // ========= animation and page transition ========= //
+
+  useEffect(() => {
+    document.body.style.pointerEvents = "all";
+  }, []);
 
   const { pathname } = useRouter();
   const ease = [0.7, 0, 0.15, 1];
