@@ -1,5 +1,5 @@
 // General
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
@@ -21,7 +21,6 @@ import {
   TextContainer,
   ButtonContainer,
   BackgroundVideo,
-  SwitchProject,
   LinkProject,
 } from "../styles/PagesStyles/project.styles";
 import { IconContainer } from "../styles/PagesStyles/project.styles";
@@ -74,35 +73,6 @@ const project: FC<Props> = ({ obj }) => {
     },
   };
 
-  // ========= find previous and next project ========= //
-
-  const [prev, setPrev] = useState<Switch | null>();
-  const [next, setNext] = useState<Switch | null>();
-
-  useEffect(() => {
-    if (obj) {
-      const goodIndex = projects.findIndex((item) => item.href === obj.href);
-
-      if (!projects[goodIndex - 1]) {
-        setPrev(null);
-      } else {
-        setPrev({
-          href: projects[goodIndex - 1].href,
-          switch: projects[goodIndex - 1].switch,
-        });
-      }
-
-      if (!projects[goodIndex + 1]) {
-        setNext(null);
-      } else {
-        setNext({
-          href: projects[goodIndex + 1].href,
-          switch: projects[goodIndex + 1].switch,
-        });
-      }
-    }
-  }, [obj]);
-
   return (
     <>
       <motion.div
@@ -149,7 +119,7 @@ const project: FC<Props> = ({ obj }) => {
           ))}
         </Flex>
       </Container>
-      <Container maxWidth="1500px" padding="0 0 6rem 0">
+      <Container maxWidth="1500px">
         <BackgroundVideo backgroundColor={obj.backgroundColor}>
           <Flex justifyContent="center" alignItems="center">
             <video autoPlay muted loop>
@@ -157,38 +127,12 @@ const project: FC<Props> = ({ obj }) => {
             </video>
           </Flex>
         </BackgroundVideo>
-      </Container>
-      <Container maxWidth="1500px" padding="6rem 0">
         <Flex justifyContent="center" alignItems="center">
           <LinkProject>
             <Link href={obj.site}>
               <a>Visiter le site</a>
             </Link>
           </LinkProject>
-        </Flex>
-        <Flex justifyContent="space-between" alignItems="center">
-          {prev ? (
-            <Link href={prev.href}>
-              <SwitchProject textAlign="left">
-                <div>
-                  <p>PROJET PRECEDENT</p>
-                  <h4>{prev.switch}</h4>
-                </div>
-              </SwitchProject>
-            </Link>
-          ) : (
-            <div></div> // Div to make flex space-between work nicely in the first projet
-          )}
-          {next && (
-            <Link href={next.href}>
-              <SwitchProject textAlign="right">
-                <div>
-                  <p>PROJET SUIVANT</p>
-                  <h4>{next.switch}</h4>
-                </div>
-              </SwitchProject>
-            </Link>
-          )}
         </Flex>
       </Container>
     </>
