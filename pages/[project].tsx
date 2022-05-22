@@ -5,6 +5,7 @@ import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
+import { useRouter } from "next/router";
 
 // Styles
 import {
@@ -47,7 +48,15 @@ type Switch = {
 };
 
 const project: FC<Props> = ({ obj }) => {
+  // ========= animation and page transition ========= //
+
+  const { pathname } = useRouter();
   const ease = [0.7, 0, 0.15, 1];
+  const transitionTime = 2;
+
+  useEffect(() => {
+    if (pathname !== "/[project]") document.body.style.overflow = "hidden";
+  }, [pathname]);
 
   const animation: Variants = {
     hidden: {
@@ -97,7 +106,7 @@ const project: FC<Props> = ({ obj }) => {
   return (
     <>
       <motion.div
-        exit={{ opacity: 0, transition: { duration: 2 } }}
+        exit={{ opacity: 0, transition: { duration: transitionTime } }}
       ></motion.div>
       <PageTransition initial="hidden" exit="exit" variants={animation}>
         <Flex justifyContent="center" alignItems="center">

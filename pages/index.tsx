@@ -1,5 +1,5 @@
 // General
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import type { NextPage } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { Variants } from "framer-motion";
@@ -37,7 +37,18 @@ type RenderList = {
 };
 
 const Home: NextPage = () => {
+  // ========= animation and page transition ========= //
+
   const ease = [0.7, 0, 0.15, 1];
+  const transitionTime = 1;
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    setTimeout(() => {
+      document.body.style.overflow = "initial";
+    }, transitionTime * 1000);
+  }, []);
 
   const animation: Variants = {
     show: {
@@ -49,7 +60,7 @@ const Home: NextPage = () => {
     hidden: {
       transform: "translateY(-120vh) skewY(-5deg)",
       transition: {
-        duration: 1,
+        duration: transitionTime,
         ease: ease,
       },
     },
