@@ -17,7 +17,14 @@ export const ButtonBack = styled.a`
   z-index: 1000;
   line-height: 0.8;
   padding: 0.75rem 1rem;
-  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 9px;
+    margin-left: 0.75rem;
+  }
 
   @media screen and (max-width: 1250px) {
     right: 3rem;
@@ -26,6 +33,11 @@ export const ButtonBack = styled.a`
 
   @media screen and (max-width: 768px) {
     font-size: ${fontSize.MD};
+
+    svg {
+      width: 7px;
+      margin-left: 0.5rem;
+    }
   }
 
   @media screen and (max-width: 768px) {

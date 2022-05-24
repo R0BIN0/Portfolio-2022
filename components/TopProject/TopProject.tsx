@@ -70,7 +70,22 @@ const TopProject: FC<TopProjectProps> = ({
         </div>
 
         <Link href="/">
-          <ButtonBack>Retour</ButtonBack>
+          <ButtonBack>
+            <p>Retour</p>
+            <svg
+              viewBox="0 0 9 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 15L8 8L1 1"
+                stroke="#393D46"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </ButtonBack>
         </Link>
 
         <Container maxWidth="1024px" padding="6rem">
