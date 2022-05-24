@@ -1,6 +1,7 @@
 // General
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { colors } from "../../config/variables";
 
 export const CardContainer = styled.div`
   @media screen and (max-width: 1250px) {
@@ -30,7 +31,7 @@ export const LittleLoader = styled(motion.div)`
   width: 40px;
   height: 40px;
   background-color: #161616;
-  border-radius: 3px;
+  border-radius: 1px;
   z-index: 10000;
 
   @media screen and (max-width: 768px) {
@@ -44,7 +45,7 @@ export const LittleLoader = styled(motion.div)`
     width: 15px;
     height: 15px;
     border: 2px solid white;
-    border-color: white transparent white transparent;
+    border-color: white #4c505a #4c505a #4c505a;
     border-radius: 50%;
     animation: rotate 1.2s linear infinite;
   }
