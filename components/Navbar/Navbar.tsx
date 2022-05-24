@@ -1,6 +1,7 @@
 // General
 import { FC } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Styles
 import { Nav, IconContainer } from "./Navbar.styles";
@@ -17,7 +18,11 @@ const Navbar: FC = () => {
           {/* ================================== NAV LEFT ================================== */}
 
           <div>
-            <Image src={Logo} width="40px" height="40px" />
+            <Link href={"/"}>
+              <a>
+                <Image src={Logo} width="40px" height="40px" />
+              </a>
+            </Link>
           </div>
 
           {/* ================================== NAV RIGHT ================================== */}

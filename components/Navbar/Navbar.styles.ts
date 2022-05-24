@@ -8,7 +8,7 @@ import { colors, padding } from "../../config/variables";
 
 export const Nav = styled.nav`
   width: 100%;
-  height: 4.5rem;
+  height: 4rem;
   background-color: ${colors.SECONDARY};
 
   @media screen and (max-width: 500px) {
