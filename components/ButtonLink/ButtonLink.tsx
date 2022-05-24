@@ -11,18 +11,30 @@ import { Flex } from "../../styles/Global/Global.styles";
 type Props = {
   txt: string;
   href: string;
+  external?: boolean;
 };
 
-const ButtonLink: FC<Props> = ({ txt, href }) => {
+const ButtonLink: FC<Props> = ({ txt, href, external }) => {
   return (
-    <Link href={href}>
-      <CustomLink>
-        <Flex justifyContent="center" alignItems="center">
-          {txt}
-          <div className="link-arrow"></div>
-        </Flex>
-      </CustomLink>
-    </Link>
+    <>
+      {external ? (
+        <CustomLink href={href} target="_blank">
+          <Flex justifyContent="center" alignItems="center">
+            {txt}
+            <div className="link-arrow"></div>
+          </Flex>
+        </CustomLink>
+      ) : (
+        <Link href={href}>
+          <CustomLink>
+            <Flex justifyContent="center" alignItems="center">
+              {txt}
+              <div className="link-arrow"></div>
+            </Flex>
+          </CustomLink>
+        </Link>
+      )}
+    </>
   );
 };
 

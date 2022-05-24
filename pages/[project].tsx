@@ -92,7 +92,7 @@ const project: FC<Props> = ({ obj }) => {
       />
       <Container maxWidth="1024px" padding="6rem">
         <TitleContainer>
-          <Title>{obj.firstTitle}</Title>
+          <Title>{obj.secondTitle}</Title>
         </TitleContainer>
         <TextContainer>
           <div>
@@ -101,7 +101,11 @@ const project: FC<Props> = ({ obj }) => {
 
             <ButtonContainer>
               <ButtonGithub txt="Code source" href={obj.github} />
-              <ButtonLink txt="Visiter le site" href={obj.site} />
+              <ButtonLink
+                external={true}
+                txt="Visiter le site"
+                href={obj.site}
+              />
             </ButtonContainer>
           </div>
           <div>
@@ -129,7 +133,7 @@ const project: FC<Props> = ({ obj }) => {
         <Flex justifyContent="center" alignItems="center">
           <LinkProject>
             <Link href={obj.site}>
-              <a>Visiter le site</a>
+              <a target="_blank">Visiter le site</a>
             </Link>
           </LinkProject>
         </Flex>

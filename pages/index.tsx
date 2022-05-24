@@ -1,6 +1,5 @@
 // General
 import { FC, useEffect, useState } from "react";
-import type { NextPage } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { motion, Variants } from "framer-motion";
 
@@ -37,7 +36,7 @@ type RenderList = {
   filter: string;
 };
 
-const Home: NextPage = () => {
+const Home: FC = () => {
   // ========= animation and page transition ========= //
 
   const ease = [0.7, 0, 0.15, 1];
@@ -59,6 +58,9 @@ const Home: NextPage = () => {
       transform: "translateY(0vh) skewY(0deg)",
     },
     hidden: {
+      position: "fixed",
+      top: 0,
+      left: 0,
       transform: "translateY(-120vh) skewY(-5deg)",
       transition: {
         duration: transitionTime,
@@ -154,7 +156,12 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <PageTransition initial="show" animate="hidden" variants={animation}>
+      <PageTransition
+        initial="show"
+        animate="hidden"
+        variants={animation}
+        // style={{ display: firstLoad ? "none" : "initial" }}
+      >
         <Flex justifyContent="center" alignItems="center">
           <ImgLoader />
         </Flex>

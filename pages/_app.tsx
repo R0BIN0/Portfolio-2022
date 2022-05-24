@@ -11,6 +11,7 @@ import Navbar from "../components/Navbar/Navbar";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const { pathname } = useRouter();
+
   return (
     <>
       <AnimatePresence exitBeforeEnter>

@@ -2,7 +2,6 @@ import { StaticImageData } from "next/image";
 
 export type Project = {
   href: string;
-  switch: string;
   firstTitle: string;
   site: string;
   github: string;
