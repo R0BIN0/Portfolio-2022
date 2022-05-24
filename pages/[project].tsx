@@ -36,6 +36,7 @@ import projects from "../data/projects";
 
 // Types
 import { Project } from "../config/types";
+import Head from "next/head";
 
 type Props = {
   obj: Project;
@@ -74,6 +75,11 @@ const project: FC<Props> = ({ obj }) => {
 
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio Robin Blanquart | {obj.title}</title>
+      </Head>
+
       <motion.div
         exit={{ opacity: 0, transition: { duration: transitionTime } }}
       ></motion.div>

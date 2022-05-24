@@ -2,6 +2,7 @@
 import { FC, useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { motion, Variants } from "framer-motion";
+import Head from "next/head";
 
 // Styles
 import {
@@ -156,12 +157,11 @@ const Home: FC = () => {
 
   return (
     <>
-      <PageTransition
-        initial="show"
-        animate="hidden"
-        variants={animation}
-        // style={{ display: firstLoad ? "none" : "initial" }}
-      >
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio Robin Blanquart | Accueil</title>
+      </Head>
+      <PageTransition initial="show" animate="hidden" variants={animation}>
         <Flex justifyContent="center" alignItems="center">
           <ImgLoader />
         </Flex>

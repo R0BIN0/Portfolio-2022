@@ -20,6 +20,7 @@ import { Project, ProjectHome } from "../config/types";
 
 export const projects: Project[] = [
   {
+    title: "Portfolio",
     href: "portfolio",
     firstTitle:
       "Portfolio.. ception ! Il regroupe mes plus gros projets permettant d’expliquer et de faire comprendre le rôle que j’ai joué à travers mes différentes créations.",
@@ -48,6 +49,7 @@ export const projects: Project[] = [
     backgroundColor: "#393A46",
   },
   {
+    title: "Mobile App",
     href: "mobile_app",
     firstTitle:
       "Movie App est une application IOS et Android de films avec système de recherche et d’ajout aux favoris avec l’utilisation de l’API “The Movie DataBase (TMDB) !",
@@ -69,6 +71,7 @@ export const projects: Project[] = [
   },
 
   {
+    title: "Panier",
     href: "panier",
     firstTitle:
       "Le projet “Panier” est un site de montres de luxe ayant les fonctionnalités d’un simple système de panier, certes mais avec style ! ",
@@ -90,6 +93,7 @@ export const projects: Project[] = [
   },
 
   {
+    title: "E-Tech",
     href: "e_tech",
     firstTitle:
       "E-Tech est un site e-commerce fictif de ventes de produits et périphériques d’ordinateur avec la plupart différentes fonctionnalités présente sur un site de vente en ligne .",
