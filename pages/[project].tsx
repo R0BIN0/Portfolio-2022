@@ -73,6 +73,21 @@ const project: FC<Props> = ({ obj }) => {
     },
   };
 
+  const sectionAnimation: Variants = {
+    hidden: {
+      transform: "translateY(50px)",
+      opacity: 0,
+    },
+    show: {
+      transform: "translateY(0px)",
+      opacity: 1,
+      transition: {
+        duration: 0.75,
+        ease: [0.79, 0.14, 0.15, 0.86],
+      },
+    },
+  };
+
   return (
     <>
       <Head>
@@ -98,14 +113,40 @@ const project: FC<Props> = ({ obj }) => {
       />
       <Container maxWidth="1024px" padding="6rem">
         <TitleContainer>
-          <Title>{obj.secondTitle}</Title>
+          <Title
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={sectionAnimation}
+          >
+            {obj.secondTitle}
+          </Title>
         </TitleContainer>
         <TextContainer>
           <div>
-            <TextTitle>Mon rôle</TextTitle>
-            <Text>{obj.role}</Text>
+            <TextTitle
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={sectionAnimation}
+            >
+              Mon rôle
+            </TextTitle>
+            <Text
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={sectionAnimation}
+            >
+              {obj.role}
+            </Text>
 
-            <ButtonContainer>
+            <ButtonContainer
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={sectionAnimation}
+            >
               <ButtonGithub txt="Code source" href={obj.github} />
               <ButtonLink
                 external={true}
@@ -115,21 +156,62 @@ const project: FC<Props> = ({ obj }) => {
             </ButtonContainer>
           </div>
           <div>
-            <TextTitle>Déroulement</TextTitle>
-            <Text>{obj.process}</Text>
+            <TextTitle
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={sectionAnimation}
+            >
+              Déroulement
+            </TextTitle>
+            <Text
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={sectionAnimation}
+            >
+              {obj.process}
+            </Text>
           </div>
         </TextContainer>
-        <TextTitle>Technologies</TextTitle>
+        <TextTitle
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={sectionAnimation}
+        >
+          Technologies
+        </TextTitle>
         <Flex justifyContent="flex-start" alignItems="center">
-          {obj.technologies.map((item) => (
-            <IconContainer key={uuidv4()}>
+          {obj.technologies.map((item, i) => (
+            <IconContainer
+              initial="hidden"
+              whileInView={{
+                transform: "translateY(0px)",
+                opacity: 1,
+                transition: {
+                  delay: i * 0.075,
+                  duration: 0.5,
+                  ease: [1, 0, 0, 1],
+                },
+              }}
+              viewport={{ once: true }}
+              variants={sectionAnimation}
+              key={uuidv4()}
+            >
               <Image src={item} width={item.width} height={item.height} />
             </IconContainer>
           ))}
         </Flex>
       </Container>
       <Container maxWidth="1500px">
-        <BackgroundVideo backgroundColor={obj.backgroundColor}>
+        <BackgroundVideo
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={sectionAnimation}
+          backgroundColor={obj.backgroundColor}
+        >
           <Flex justifyContent="center" alignItems="center">
             <video autoPlay muted loop>
               <source type="video/mp4" src={obj.video} />

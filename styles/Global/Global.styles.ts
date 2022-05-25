@@ -64,7 +64,7 @@ export const TitleContainer = styled.div<TitleContainer>`
 
 // =================================== TITLE ===================================
 
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   color: ${colors.PRIMARY};
   font-size: ${fontSize.XL};
   font-weight: 500;
@@ -78,7 +78,7 @@ export const Title = styled.h1`
 
 // =================================== TEXT TITLE ===================================
 
-export const TextTitle = styled.h3`
+export const TextTitle = styled(motion.h3)`
   color: ${colors.PRIMARY};
   font-size: ${fontSize.MD};
   font-weight: 700;
@@ -87,7 +87,7 @@ export const TextTitle = styled.h3`
 
 // =================================== TEXT ===================================
 
-export const Text = styled.p<Text>`
+export const Text = styled(motion.p)<Text>`
   color: ${colors.PRIMARY_LIGHT};
   font-size: ${fontSize.S};
   line-height: 1.75;

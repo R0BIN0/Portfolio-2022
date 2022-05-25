@@ -1,5 +1,6 @@
 // General
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 // Variables
 import { colors, margin } from "../../config/variables";
@@ -26,7 +27,7 @@ export const TextContainer = styled.div`
   }
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled(motion.div)`
   max-width: 320px;
   margin-top: ${margin.MARGIN_7};
   display: flex;
@@ -42,12 +43,12 @@ export const ButtonContainer = styled.div`
   }
 `;
 
-export const IconContainer = styled.div`
+export const IconContainer = styled(motion.div)`
   width: 27.5px;
   margin-right: ${margin.MARGIN_4};
 `;
 
-export const BackgroundVideo = styled.div<BackgroundVideo>`
+export const BackgroundVideo = styled(motion.div)<BackgroundVideo>`
   width: 100%;
   height: 700px;
   padding: 2rem;
