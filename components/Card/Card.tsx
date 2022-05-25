@@ -3,16 +3,20 @@ import { FC, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
+import { motion, Variants } from "framer-motion";
 
 // Styles
 import { CardBox, CardYear, CardLeft, CardRight } from "./Card.styles";
 import { Flex } from "../../styles/Global/Global.styles";
+
+// Components
 import ImgLoader from "../ImgLoader/ImgLoader";
 
 // Types
 
 type Props = {
   id: number;
+  animation: Variants;
   href: string;
   year: string;
   type: string;
@@ -24,6 +28,7 @@ type Props = {
 
 const Card: FC<Props> = ({
   id,
+  animation,
   href,
   year,
   type,
@@ -32,12 +37,14 @@ const Card: FC<Props> = ({
   image,
   backgroundColor,
 }) => {
+  // ========= animations ========= //
+
   const [imgLoad, setImgLoad] = useState(false);
 
   return (
-    <>
+    <motion.div variants={animation}>
       <Link href={`/${href}`}>
-        <CardBox backgroundColor={backgroundColor}>
+        <CardBox backgroundcolor={backgroundColor}>
           {id === 0 && (
             <CardYear>
               <Flex justifyContent="space-between" alignItems="center">
@@ -79,13 +86,14 @@ const Card: FC<Props> = ({
                   objectFit="cover"
                   quality={20}
                   onLoadingComplete={() => setImgLoad(true)}
+                  priority
                 />
               )}
             </div>
           </CardRight>
         </CardBox>
       </Link>
-    </>
+    </motion.div>
   );
 };
 

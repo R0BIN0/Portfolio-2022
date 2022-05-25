@@ -1,6 +1,5 @@
 // General
 import { FC, useEffect, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import { motion, Variants } from "framer-motion";
 import Head from "next/head";
 
@@ -22,22 +21,23 @@ import {
 
 // Components
 import ButtonLink from "../components/ButtonLink/ButtonLink";
-import Card from "../components/Card/Card";
 import ButtonGithub from "../components/ButtonGithub/ButtonGithub";
+import { MemoizedCardList } from "../components/CardList/CardList";
 
 // Data
-import { projectsHome } from "../data/projects";
 import TopProject from "../components/TopProject/TopProject";
 
 // Type
 import { TopProjectProps } from "../config/types";
 import ImgLoader from "../components/ImgLoader/ImgLoader";
 
-type RenderList = {
-  filter: string;
-};
-
 const Home: FC = () => {
+  const [clickedProject, setClickedProject] = useState<TopProjectProps>();
+
+  useEffect(() => {
+    document.body.style.pointerEvents = "all";
+  }, []);
+
   // ========= animation and page transition ========= //
 
   const ease = [0.7, 0, 0.15, 1];
@@ -107,54 +107,6 @@ const Home: FC = () => {
     },
   };
 
-  // ========= render list of items ========= //
-
-  useEffect(() => {
-    document.body.style.pointerEvents = "all";
-  }, []);
-
-  const [clickedProject, setClickedProject] = useState<TopProjectProps>();
-
-  const RenderItems: FC<RenderList> = ({ filter }): JSX.Element => {
-    const clickedProjectFunc = (obj: TopProjectProps): void => {
-      setClickedProject(obj);
-      document.body.style.pointerEvents = "none";
-    };
-
-    return (
-      <>
-        {projectsHome
-          .filter((item) => item.year.includes(filter))
-          .map((item, i) => (
-            <div
-              key={uuidv4()}
-              onClick={() =>
-                clickedProjectFunc({
-                  firstTitle: item.firstTitle,
-                  site: item.site,
-                  description: item.description,
-                  backgroundColor: item.backgroundColor,
-                  image: item.image,
-                })
-              }
-              style={{ width: "100%" }}
-            >
-              <Card
-                id={i}
-                href={item.href}
-                year={item.year}
-                type={item.type}
-                title={item.title}
-                technologies={item.technologies}
-                image={item.image}
-                backgroundColor={item.backgroundColor}
-              />
-            </div>
-          ))}
-      </>
-    );
-  };
-
   return (
     <>
       <Head>
@@ -193,9 +145,15 @@ const Home: FC = () => {
               flexFlow={true}
               margin="4rem 0 0 0"
             >
-              <RenderItems filter="2022" />
+              <MemoizedCardList
+                filter="2022"
+                setClickedProject={setClickedProject}
+              />
               <div className="card-separation">
-                <RenderItems filter="2021" />
+                <MemoizedCardList
+                  filter="2021"
+                  setClickedProject={setClickedProject}
+                />
               </div>
             </Flex>
           </CardContainer>

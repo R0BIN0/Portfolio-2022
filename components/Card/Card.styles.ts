@@ -7,17 +7,15 @@ import { colors, fontSize, margin, padding } from "../../config/variables";
 // Types
 
 type CardBox = {
-  backgroundColor: string;
+  backgroundcolor: string;
 };
 
 export const CardBox = styled.div<CardBox>`
   width: 100%;
-  height: 325px;
-  margin-bottom: ${margin.MARGIN_4};
+  height: 100%;
   display: grid;
   grid-template-columns: 300px 1fr;
-  background-color: ${({ backgroundColor }) => backgroundColor};
-  cursor: pointer;
+  background-color: ${({ backgroundcolor }) => backgroundcolor};
   transition: transform 200ms cubic-bezier(1, 0, 0, 1) 0ms;
 
   position: relative;
@@ -26,8 +24,6 @@ export const CardBox = styled.div<CardBox>`
   }
 
   @media screen and (max-width: 768px) {
-    height: 400px;
-    margin-bottom: ${margin.MARGIN_8};
     display: flex;
     justify-content: center;
     align-items: center;

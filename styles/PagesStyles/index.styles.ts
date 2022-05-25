@@ -1,7 +1,6 @@
 // General
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { colors } from "../../config/variables";
 
 export const CardContainer = styled.div`
   @media screen and (max-width: 1250px) {
