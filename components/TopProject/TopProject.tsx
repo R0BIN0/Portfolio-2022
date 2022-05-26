@@ -57,7 +57,12 @@ const TopProject: FC<TopProjectProps> = ({
       initial="hidden"
       exit="exit"
       variants={animation}
-      style={{ width: "100%", backgroundColor: "#FFF", zIndex: 1000 }}
+      style={{
+        width: "100%",
+        backgroundColor: "#FFF",
+        zIndex: 1000,
+        marginBottom: "6rem",
+      }}
     >
       <LineContainer>
         <div className="line-border">

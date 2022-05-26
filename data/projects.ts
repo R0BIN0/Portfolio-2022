@@ -58,7 +58,7 @@ export const projects: Project[] = [
     description:
       "J’avais en ligne de mire d’apprendre les rudiments du développement mobile ainsi que ses propres codes, je me suis heurter à diverses problèmes comme à l’adéquation à l’environnement de code assez différent de celui du web. ",
     image:
-      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1653568672/Frame_31_1_1_yp1mfl.png",
     technologies: [React, TypeScript, Prettier, ESLint, AndroidStudio],
     secondTitle:
       "“L'important est de ne jamais cesser de poser des questions. Ne perdez jamais une sainte curiosité” une citation d’Albert Einstein qui prend tout son sens ici...",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     process:
       "C’est avec un but précis et une inéxpérience en terme de développement mobile que ma curiosité est invitée à en apprendre davantage sur ce dernier. Après avoir prit connaissance des fondamentaux de React Native. Ce n’est pas sans mal que je mets en place un environnement de développement mobile via “Android Studio” et “Expo” afin de créer un téléphone virtuel puis de créer une base de travail solide grâce à Expo. Après quelques mini-projets afin d’acquérir de l’expérience ainsi que des habitudes, je décide enfin de créer ma première application avec Typescript pour renforcer mon code et prévenir des éventuels problèmes. Hormis le “styling” des éléments qui ressemble à la syntaxe de “Styled Component”, ce projet m’a posé bien des soucis, premièrement avec l’importation de polices d’écritures qui de prime-abord  n’est pas très limpide. Vient ensuite l’utilisation du “localStorage” qui est quelques peu différent de celui du web (utilisation de “AsyncStorage” de la communauté React Native). Dernièrement il fallait prévenir les failles possibles de l’API (TMDB), comme le manque d’image de fond ou d’autres valeurs, Typescrit ayant été très utile ici. Finalement le projet a été posté sur le store d’Expo donnant un résultat assez agréable visuellement avec un système d’ajout au favoris et de recherches avancées.  ",
     video:
-      "https://res.cloudinary.com/e-tech-test/video/upload/v1652532636/testportfolio_k9rlbw.mp4",
+      "https://res.cloudinary.com/e-tech-test/video/upload/v1653575404/PortfolioMobileApp_ezvfkt.mp4",
     backgroundColor: "#463939",
   },
 
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     description:
       "Le principal objectif de ce projet était d’allier la technique à la créativité, pour ce faire j’ai choisi un projet simple d’apparence mais qui cachait quelques difficultés comme la gestion des performances dû à l’utilisation des states avec une librarie d’animation.",
     image:
-      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1653561163/Frame_25_2_vine9f.png",
     technologies: [React, JavaScript, FramerMotion, Prettier, ESLint],
     secondTitle:
       "Un projet simple d’apparence mais qui n’en n’a que l’air, en effet l’utilisation d’une librarie d’animation avec React à su me poser quelques obstacles",
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     process:
       "Un “mini projet” n’évite pas à la mise en place d’un processus stricte, c’est pour ça que j’ai décidé pour ce projet de me plonger davantage dans les “bonnes pratiques” de développement, après quelques recherches je mets en place “Prettier” ainsi que “ESLint” afin de converser un style de code linéaire et gagner en propreté de code. De plus en amont du projet j’ai fais beaucoup de recherches sur les “spread operators” ainsi que la notion de “Mémoïsation” en React. Mes armes faites j’engage le projet, sans réels problèmes jusqu’à la mise en place de la librarie d’animation “Framer Motion” qui en raison des “render(s)” générés par une application React à chaque changement de state ont complexifié le rendu de mes animations (ex: animations qui se répètent). Après plusieurs recherches ainsi qu’approfondissement de la documentation de framer-motion, les bugs n’étaient devenus que de mauvais souvenirs, laissant place à un projet visuellement appréciable.",
     video:
-      "https://res.cloudinary.com/e-tech-test/video/upload/v1652532636/testportfolio_k9rlbw.mp4",
+      "https://res.cloudinary.com/e-tech-test/video/upload/v1653576999/PortfolioPanier_trnhre.mp4",
     backgroundColor: "#464639",
   },
 
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     description:
       "Le but de ce projet a été d'apprendre à manipuler les différents aspects de la programmation web : faire interagir le Front-end avec le Back-end et une base de données mais également d'améliorer mon autonomie face aux difficultés rencontrées.",
     image:
-      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1653571296/Frame_24_hbvvav.png",
     technologies: [
       PhotoShop,
       React,
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     process:
       "Le projet débute en Mai 2021 des suites de mon apprentissage des fondamentaux de React. Afin de structurer mon projet j’ai décidé de développer la maquette sur Figma en amont en me basant sur des sites e-commerce afin de conserver les codes propres à ces sites (Amazon, Cdiscount, BackMarket).  Toujours dans l’idée de conserver une structure du projet correct, je décide de réaliser toute la partie front-end avec des valeurs bruts. Aucune grosses difficultés rencontrées. Néanmoins la partie Back-end a été un gros challenge pour moi car j’ai dû apprendre en parralèle de mon projet énormément de notions liées au développement back-end et de sécurité (SQL Injection) ainsi que Node / Express / MongoDB. C’est ici que j’ai développé des reflexes pour faire face aux différentes difficultés comme la lecture de la documentation, Stack Overflow, Youtube. C’est après 4 longs mois de bataille que j’arrive à sortir ce projet.",
     video:
-      "https://res.cloudinary.com/e-tech-test/video/upload/v1652532636/testportfolio_k9rlbw.mp4",
+      "https://res.cloudinary.com/e-tech-test/video/upload/v1653573235/PortfolioE_tech_odrwpt.mp4",
     backgroundColor: "#393D46",
   },
 ];
@@ -154,7 +154,7 @@ export const projectsHome: ProjectHome[] = [
     title: "Movie App",
     technologies: [React, TypeScript, Prettier, ESLint, AndroidStudio],
     image:
-      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1653568672/Frame_31_1_1_yp1mfl.png",
     backgroundColor: "#463939",
     firstTitle:
       "Movie App est une application IOS et Android de films avec système de recherche et d’ajout aux favoris avec l’utilisation de l’API “The Movie DataBase (TMDB) !",
@@ -169,7 +169,7 @@ export const projectsHome: ProjectHome[] = [
     title: "Panier",
     technologies: [React, JavaScript, FramerMotion, Prettier, ESLint],
     image:
-      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1653561163/Frame_25_2_vine9f.png",
     backgroundColor: "#464639",
     firstTitle:
       "Le projet “Panier” est un site de montres de luxe ayant les fonctionnalités d’un simple système de panier, certes mais avec style ! ",
@@ -183,7 +183,7 @@ export const projectsHome: ProjectHome[] = [
     type: "Site e-commerce",
     title: "E-tech",
     image:
-      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1653571296/Frame_24_hbvvav.png",
     technologies: [
       PhotoShop,
       React,

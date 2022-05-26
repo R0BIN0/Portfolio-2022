@@ -10,6 +10,10 @@ type CardBox = {
   backgroundcolor: string;
 };
 
+type CardRight = {
+  backgroundcolor: string;
+};
+
 export const CardBox = styled.div<CardBox>`
   width: 100%;
   height: 100%;
@@ -90,7 +94,7 @@ export const CardLeft = styled.div`
   }
 `;
 
-export const CardRight = styled.div`
+export const CardRight = styled.div<CardRight>`
   width: 100%;
   height: 100%;
   position: relative;
@@ -108,8 +112,8 @@ export const CardRight = styled.div`
       width: 100%;
       height: 100%;
       z-index: 100;
-      background-color: ${colors.PRIMARY};
-      opacity: 0.2;
+      background-color: ${({ backgroundcolor }) => backgroundcolor};
+      opacity: 0.3;
     }
   }
 `;

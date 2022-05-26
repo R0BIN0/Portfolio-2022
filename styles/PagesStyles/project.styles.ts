@@ -49,6 +49,7 @@ export const IconContainer = styled(motion.div)`
 `;
 
 export const BackgroundVideo = styled(motion.div)<BackgroundVideo>`
+  margin-top: 6rem;
   width: 100%;
   height: 700px;
   padding: 2rem;
@@ -70,6 +71,7 @@ export const BackgroundVideo = styled(motion.div)<BackgroundVideo>`
 
   @media screen and (max-width: 500px) {
     height: 300px;
+    display: none;
   }
 `;
 

@@ -111,7 +111,7 @@ const project: FC<Props> = ({ obj }) => {
         image={obj.image}
         backgroundColor={obj.backgroundColor}
       />
-      <Container maxWidth="1024px" padding="6rem">
+      <Container maxWidth="1024px">
         <TitleContainer>
           <Title
             initial="hidden"

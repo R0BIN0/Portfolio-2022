@@ -75,7 +75,7 @@ const Card: FC<Props> = ({
               </div>
             </Flex>
           </CardLeft>
-          <CardRight>
+          <CardRight backgroundcolor={backgroundColor}>
             <div className="img-container">
               {imgLoad && <ImgLoader backgroundColor={backgroundColor} />}
               {image && (
