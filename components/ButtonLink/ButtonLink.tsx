@@ -12,9 +12,10 @@ type Props = {
   txt: string;
   href: string;
   external?: boolean;
+  action?: () => void;
 };
 
-const ButtonLink: FC<Props> = ({ txt, href, external }) => {
+const ButtonLink: FC<Props> = ({ txt, href, external, action }) => {
   return (
     <>
       {external ? (
@@ -26,7 +27,7 @@ const ButtonLink: FC<Props> = ({ txt, href, external }) => {
         </CustomLink>
       ) : (
         <Link href={href}>
-          <CustomLink>
+          <CustomLink onClick={action}>
             <Flex justifyContent="center" alignItems="center">
               {txt}
               <div className="link-arrow"></div>

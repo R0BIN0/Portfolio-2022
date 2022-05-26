@@ -35,23 +35,25 @@ const Home: FC = () => {
   const [clickedProject, setClickedProject] = useState<TopProjectProps>();
 
   useEffect(() => {
-    document.body.style.pointerEvents = "all";
-  }, []);
-
-  // ========= animation and page transition ========= //
-
-  const ease = [0.7, 0, 0.15, 1];
-  const transitionTime = 1;
-
-  useEffect(() => {
     document.body.style.overflow = "hidden";
+    document.body.style.pointerEvents = "all";
 
     setTimeout(() => {
       document.body.style.overflow = "initial";
     }, transitionTime * 1000);
   }, []);
 
-  const animation: Variants = {
+  // ========= animation and page transition ========= //
+
+  const ease = [0.7, 0, 0.15, 1];
+  const transitionTime = 1;
+  const [goToMe, setGoToMe] = useState<boolean>(false);
+
+  const switchTransition = (): void => {
+    setGoToMe(true);
+  };
+
+  const projectTransition: Variants = {
     show: {
       position: "fixed",
       top: 0,
@@ -65,6 +67,22 @@ const Home: FC = () => {
       transform: "translateY(-120vh) skewY(-5deg)",
       transition: {
         duration: transitionTime,
+        ease: ease,
+      },
+    },
+  };
+
+  const goToMeTransition: Variants = {
+    hidden: {
+      position: "fixed",
+      top: 0,
+      left: 0,
+      transform: "translateY(-120vh) skewY(-5deg)",
+    },
+    exit: {
+      transform: "translateY(0vh) skewY(0deg)",
+      transition: {
+        duration: 1,
         ease: ease,
       },
     },
@@ -113,7 +131,19 @@ const Home: FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Portfolio Robin Blanquart | Accueil</title>
       </Head>
-      <PageTransition initial="show" animate="hidden" variants={animation}>
+
+      {goToMe && (
+        <motion.div
+          exit={{ opacity: 0, transition: { duration: 2 } }}
+        ></motion.div>
+      )}
+
+      <PageTransition
+        initial="show"
+        animate="hidden"
+        exit="exit"
+        variants={goToMe ? goToMeTransition : projectTransition}
+      >
         <Flex justifyContent="center" alignItems="center">
           <ImgLoader />
         </Flex>
@@ -135,7 +165,12 @@ const Home: FC = () => {
               Bonjour, je suis <strong>Robin Blanquart</strong>. Jeune
               développeur passionné par le développement web et l’Ui/Ux Design.
             </Title>
-            <ButtonLink txt="En savoir plus sur moi" href="/me" />
+
+            <ButtonLink
+              txt="En savoir plus sur moi"
+              href="/me"
+              action={switchTransition}
+            />
           </TitleContainer>
 
           <CardContainer>
