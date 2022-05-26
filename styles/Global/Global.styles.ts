@@ -94,6 +94,18 @@ export const Text = styled(motion.p)<Text>`
   font-weight: 500;
   max-width: ${({ maxWidth }) => maxWidth};
   margin: ${({ margin }) => margin};
+
+  & strong {
+    font-weight: 700;
+  }
+
+  & i {
+    font-style: italic;
+  }
+
+  & span {
+    color: ${colors.CTA};
+  }
 `;
 
 // =================================== LINE CONTAINER ===================================
