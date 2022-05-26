@@ -95,6 +95,8 @@ const project: FC<Props> = ({ obj }) => {
         <title>Portfolio Robin Blanquart | {obj.title}</title>
       </Head>
 
+      {/* =========== RELATIVE TO PAGE TRANSITION =========== */}
+
       <motion.div
         exit={{ opacity: 0, transition: { duration: transitionTime } }}
       ></motion.div>
@@ -103,6 +105,8 @@ const project: FC<Props> = ({ obj }) => {
           <ImgLoader />
         </Flex>
       </PageTransition>
+
+      {/* =================================================== */}
 
       <TopProject
         firstTitle={obj.firstTitle}

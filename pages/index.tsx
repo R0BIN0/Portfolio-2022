@@ -2,6 +2,7 @@
 import { FC, useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 // Styles
 import {
@@ -34,6 +35,13 @@ import ImgLoader from "../components/ImgLoader/ImgLoader";
 const Home: FC = () => {
   const [clickedProject, setClickedProject] = useState<TopProjectProps>();
 
+  // ========= animation and page transition ========= //
+
+  const [goToMe, setGoToMe] = useState<boolean>(false);
+  const { pathname } = useRouter();
+  const ease = [0.7, 0, 0.15, 1];
+  const transitionTime = 1;
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
     document.body.style.pointerEvents = "all";
@@ -43,11 +51,9 @@ const Home: FC = () => {
     }, transitionTime * 1000);
   }, []);
 
-  // ========= animation and page transition ========= //
-
-  const ease = [0.7, 0, 0.15, 1];
-  const transitionTime = 1;
-  const [goToMe, setGoToMe] = useState<boolean>(false);
+  useEffect(() => {
+    if (pathname === "/me") document.body.style.overflow = "hidden";
+  }, [pathname]);
 
   const switchTransition = (): void => {
     setGoToMe(true);
@@ -132,10 +138,25 @@ const Home: FC = () => {
         <title>Portfolio Robin Blanquart | Accueil</title>
       </Head>
 
+      {/* =========== RELATIVE TO PAGE TRANSITION =========== */}
+
       {goToMe && (
-        <motion.div
-          exit={{ opacity: 0, transition: { duration: 2 } }}
-        ></motion.div>
+        <>
+          <motion.div
+            exit={{ opacity: 0, transition: { duration: 2 } }}
+          ></motion.div>
+
+          <LittleLoader
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            variants={loader}
+          >
+            <Flex justifyContent="center" alignItems="center">
+              <motion.div className="little-loader"></motion.div>
+            </Flex>
+          </LittleLoader>
+        </>
       )}
 
       <PageTransition
@@ -148,6 +169,8 @@ const Home: FC = () => {
           <ImgLoader />
         </Flex>
       </PageTransition>
+
+      {/* =================================================== */}
 
       <LineContainer>
         <div className="line-border">
