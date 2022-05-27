@@ -8,7 +8,7 @@ import { colors, margin } from "../../config/variables";
 // Types
 
 type BackgroundVideo = {
-  backgroundColor: string;
+  backgroundcolor: string;
 };
 
 export const TextContainer = styled.div`
@@ -53,7 +53,7 @@ export const BackgroundVideo = styled(motion.div)<BackgroundVideo>`
   width: 100%;
   height: 700px;
   padding: 2rem;
-  background-color: ${({ backgroundColor }) => backgroundColor};
+  background-color: ${({ backgroundcolor }) => backgroundcolor};
 
   video {
     width: 100%;

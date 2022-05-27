@@ -182,7 +182,7 @@ const Home: FC = () => {
           </div>
         </div>
 
-        <Container maxWidth="1024px" padding="3rem">
+        <Container maxwidth="1024px" padding="3rem">
           <TitleContainer>
             <Title>
               Bonjour, je suis <strong>Robin Blanquart</strong>. Jeune

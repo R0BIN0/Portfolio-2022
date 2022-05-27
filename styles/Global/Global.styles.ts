@@ -13,7 +13,7 @@ type Flex = {
 };
 
 type Container = {
-  maxWidth: string;
+  maxwidth: string;
   padding?: string;
 };
 
@@ -22,7 +22,7 @@ type TitleContainer = {
 };
 
 type Text = {
-  maxWidth?: string;
+  maxwidth?: string;
   margin?: string;
 };
 
@@ -44,7 +44,7 @@ export const Container = styled.section<Container>`
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: ${({ maxWidth }) => maxWidth};
+  max-width: ${({ maxwidth }) => maxwidth};
   margin: 0 auto;
   padding: ${({ padding }) => (padding ? `${padding} 4rem` : "0 4rem")};
 
@@ -78,7 +78,7 @@ export const Title = styled(motion.h1)`
 
 // =================================== TEXT TITLE ===================================
 
-export const TextTitle = styled(motion.h3)`
+export const TextTitle = styled(motion.p)`
   color: ${colors.PRIMARY};
   font-size: ${fontSize.MD};
   font-weight: 700;
@@ -92,7 +92,7 @@ export const Text = styled(motion.p)<Text>`
   font-size: ${fontSize.S};
   line-height: 1.75;
   font-weight: 500;
-  max-width: ${({ maxWidth }) => maxWidth};
+  max-width: ${({ maxwidth }) => maxwidth};
   margin: ${({ margin }) => margin};
 
   & strong {

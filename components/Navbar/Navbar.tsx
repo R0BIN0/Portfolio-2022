@@ -13,7 +13,7 @@ import Logo from "../../assets/images/Logo.png";
 const Navbar: FC = () => {
   return (
     <Nav>
-      <Container maxWidth="1024px">
+      <Container maxwidth="1024px">
         <Flex justifyContent="space-between" alignItems="center">
           {/* ================================== NAV LEFT ================================== */}
 

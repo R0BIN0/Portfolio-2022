@@ -123,7 +123,7 @@ const me = () => {
           variants={sectionAnimation}
           className="grid-content"
         >
-          <Text variants={items} maxWidth="600px" margin="0 0 2rem 0">
+          <Text variants={items} maxwidth="600px" margin="0 0 2rem 0">
             Je m&apos;appelle <strong>Robin Blanquart</strong>, j&apos;ai 18 ans
             et j&apos;habite actuellement en Picardie, plus précisement dans
             l’Aisne (02) à Saint-Quentin. En plus d’être passionné de
@@ -138,7 +138,7 @@ const me = () => {
             notamment sur le jeu “CSGO” ainsi qu’un <i>peu</i>{" "}
             <strong>d’Histoire</strong> 🤓.
           </Text>
-          <Text variants={items} maxWidth="600px" margin="0 0 3rem 0">
+          <Text variants={items} maxwidth="600px" margin="0 0 3rem 0">
             Je m’étais initialement destiné à de longues études,{" "}
             <strong>
               mon choix s’est momentanément tourné vers{" "}

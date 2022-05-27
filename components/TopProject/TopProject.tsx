@@ -74,7 +74,7 @@ const TopProject: FC<TopProjectProps> = ({
           </div>
         </div>
 
-        <Link href="/">
+        <Link href="/" passHref>
           <ButtonBack>
             <p>Retour</p>
             <svg
@@ -95,12 +95,12 @@ const TopProject: FC<TopProjectProps> = ({
           </ButtonBack>
         </Link>
 
-        <Container maxWidth="1024px" padding="6rem">
+        <Container maxwidth="1024px" padding="6rem">
           <TitleContainer>
             <Title>{firstTitle}</Title>
             <ButtonLink external={true} txt="Visiter le site" href={site} />
           </TitleContainer>
-          <Text margin="2.5rem 0 0 0" maxWidth="525px">
+          <Text margin="2.5rem 0 0 0" maxwidth="525px">
             {description}
           </Text>
         </Container>

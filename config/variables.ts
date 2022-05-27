@@ -10,7 +10,7 @@ export const fontFamily = {
 
 export const colors = {
   PRIMARY: "#393D46",
-  PRIMARY_LIGHT: "#7E8492",
+  PRIMARY_LIGHT: "#6f7583",
   SECONDARY: "#F8F8F8",
   SECONDARY_DARK: "#D3D3D3",
   CTA: "#e42503",

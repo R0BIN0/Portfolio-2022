@@ -4,13 +4,13 @@ import styled from "styled-components";
 // Types
 
 type Loader = {
-  backgroundColor?: string;
+  backgroundcolor?: string;
 };
 
 export const Loader = styled.div<Loader>`
   width: 100%;
   height: 100%;
-  background-color: ${({ backgroundColor }) => backgroundColor};
+  background-color: ${({ backgroundcolor }) => backgroundcolor};
 
   .loader {
     width: 50px;

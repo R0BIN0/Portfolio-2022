@@ -115,7 +115,7 @@ const project: FC<Props> = ({ obj }) => {
         image={obj.image}
         backgroundColor={obj.backgroundColor}
       />
-      <Container maxWidth="1024px">
+      <Container maxwidth="1024px">
         <TitleContainer>
           <Title
             initial="hidden"
@@ -203,18 +203,23 @@ const project: FC<Props> = ({ obj }) => {
               variants={sectionAnimation}
               key={uuidv4()}
             >
-              <Image src={item} width={item.width} height={item.height} />
+              <Image
+                src={item}
+                width={item.width}
+                height={item.height}
+                alt="Logo de technologies de développement web"
+              />
             </IconContainer>
           ))}
         </Flex>
       </Container>
-      <Container maxWidth="1500px">
+      <Container maxwidth="1500px">
         <BackgroundVideo
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
           variants={sectionAnimation}
-          backgroundColor={obj.backgroundColor}
+          backgroundcolor={obj.backgroundColor}
         >
           <Flex justifyContent="center" alignItems="center">
             <video autoPlay muted loop>

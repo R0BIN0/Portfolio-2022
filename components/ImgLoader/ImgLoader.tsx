@@ -9,7 +9,7 @@ type Props = {
 
 const ImgLoader: FC<Props> = ({ backgroundColor }) => {
   return (
-    <Loader backgroundColor={backgroundColor}>
+    <Loader backgroundcolor={backgroundColor}>
       <Flex justifyContent="center" alignItems="center">
         <div className="loader">
           <div className="rect1"></div>
