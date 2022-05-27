@@ -13,7 +13,7 @@ export const colors = {
   PRIMARY_LIGHT: "#7E8492",
   SECONDARY: "#F8F8F8",
   SECONDARY_DARK: "#D3D3D3",
-  CTA: "#FFA800",
+  CTA: "#e42503",
 };
 
 // ================= FONT-SIZE =================

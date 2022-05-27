@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 export class MyDocument extends Document {
   render() {
     return (
-      <Html style={{ scrollBehavior: "smooth" }}>
+      <Html lang="fr" style={{ scrollBehavior: "smooth" }}>
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 

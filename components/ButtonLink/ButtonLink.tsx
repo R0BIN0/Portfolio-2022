@@ -26,12 +26,14 @@ const ButtonLink: FC<Props> = ({ txt, href, external, action }) => {
           </Flex>
         </CustomLink>
       ) : (
-        <Link href={href}>
-          <CustomLink onClick={action}>
-            <Flex justifyContent="center" alignItems="center">
-              {txt}
-              <div className="link-arrow"></div>
-            </Flex>
+        <Link href={href} passHref>
+          <CustomLink>
+            <div onClick={action}>
+              <Flex justifyContent="center" alignItems="center">
+                <p>{txt}</p>
+                <div className="link-arrow"></div>
+              </Flex>
+            </div>
           </CustomLink>
         </Link>
       )}

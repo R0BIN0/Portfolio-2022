@@ -69,7 +69,7 @@ export const CardLeft = styled.div`
   height: 100%;
   padding: ${padding.PADDING_6};
   .card-top-title {
-    color: ${colors.PRIMARY_LIGHT};
+    color: #c8c8c8;
     font-size: ${fontSize.XS};
     font-weight: 500;
     margin-bottom: ${margin.MARGIN_1};
@@ -90,7 +90,9 @@ export const CardLeft = styled.div`
 
   .icon-container {
     width: 16px;
+    height: 16px;
     margin-right: ${margin.MARGIN_2};
+    position: relative;
   }
 `;
 

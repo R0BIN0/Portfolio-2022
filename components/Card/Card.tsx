@@ -43,7 +43,7 @@ const Card: FC<Props> = ({
 
   return (
     <motion.div variants={animation}>
-      <Link href={`/${href}`}>
+      <Link href={href}>
         <CardBox backgroundcolor={backgroundColor}>
           {id === 0 && (
             <CardYear>
@@ -68,7 +68,12 @@ const Card: FC<Props> = ({
                 <Flex justifyContent="flex-start" alignItems="center">
                   {technologies.map((item) => (
                     <div key={uuidv4()} className="icon-container">
-                      <Image src={item} />
+                      <Image
+                        src={item}
+                        width={item.width}
+                        height={item.height}
+                        alt="Logo de technologies de développement web"
+                      />
                     </div>
                   ))}
                 </Flex>
@@ -86,7 +91,7 @@ const Card: FC<Props> = ({
                   objectFit="cover"
                   quality={20}
                   onLoadingComplete={() => setImgLoad(true)}
-                  priority
+                  loading="lazy"
                 />
               )}
             </div>
