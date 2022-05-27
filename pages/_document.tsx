@@ -81,7 +81,7 @@ export class MyDocument extends Document {
           <meta
             name="theme-color"
             media="(prefers-color-scheme: light)"
-            content="#FFA800"
+            content="#e42503"
           />
           <meta
             name="theme-color"
