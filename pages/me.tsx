@@ -45,6 +45,43 @@ const me = () => {
       },
     },
   };
+
+  const sectionAnimation: Variants = {
+    show: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const items: Variants = {
+    hidden: {
+      transform: "translateY(50px)",
+      opacity: 0,
+    },
+    show: {
+      transform: "translateY(0px)",
+      opacity: 1,
+      transition: {
+        duration: 0.75,
+        ease: [0.79, 0.14, 0.15, 1],
+      },
+    },
+  };
+
+  const imageAnimation = {
+    hidden: {
+      transform: "scale(1.5)",
+    },
+    show: {
+      transform: "scale(1)",
+      transition: {
+        duration: 0.85,
+        ease: [0.79, 0.14, 0.15, 1],
+      },
+    },
+  };
+
   return (
     <>
       <motion.div
@@ -64,17 +101,29 @@ const me = () => {
 
       <Grid>
         <div className="img-container">
-          <Image
-            src="https://res.cloudinary.com/e-tech-test/image/upload/v1653600049/stephanie-cook-NDCy2-9JhUs-unsplash_2_wzs0ic.png"
-            alt="photo de Robin Blanquart"
-            layout="fill"
-            objectFit="cover"
-            quality={50}
-            priority
-          />
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={imageAnimation}
+            className="img-animation"
+          >
+            <Image
+              src="https://res.cloudinary.com/e-tech-test/image/upload/v1653600049/stephanie-cook-NDCy2-9JhUs-unsplash_2_wzs0ic.png"
+              alt="photo de Robin Blanquart"
+              layout="fill"
+              objectFit="cover"
+              quality={50}
+              priority
+            />
+          </motion.div>
         </div>
-        <div className="grid-content">
-          <Text maxWidth="600px" margin="0 0 2rem 0">
+        <motion.div
+          initial="hidden"
+          animate="show"
+          variants={sectionAnimation}
+          className="grid-content"
+        >
+          <Text variants={items} maxWidth="600px" margin="0 0 2rem 0">
             Je m&apos;appelle <strong>Robin Blanquart</strong>, j&apos;ai 18 ans
             et j&apos;habite actuellement en Picardie, plus précisement dans
             l’Aisne (02) à Saint-Quentin. En plus d’être passionné de
@@ -89,7 +138,7 @@ const me = () => {
             notamment sur le jeu “CSGO” ainsi qu’un <i>peu</i>{" "}
             <strong>d’Histoire</strong> 🤓.
           </Text>
-          <Text maxWidth="600px" margin="0 0 3rem 0">
+          <Text variants={items} maxWidth="600px" margin="0 0 3rem 0">
             Je m’étais initialement destiné à de longues études,{" "}
             <strong>
               mon choix s’est momentanément tourné vers{" "}
@@ -106,7 +155,7 @@ const me = () => {
             ayant comme appât la connaissance, que nuit et jour, je développe
             sans être limité par un programme uniforme et désuet.
           </Text>
-          <div className="grid-contact-container">
+          <motion.div variants={items} className="grid-contact-container">
             <Flex
               justifyContent="center"
               alignItems="flex-start"
@@ -127,7 +176,7 @@ const me = () => {
                 Linkedin
               </a>
               <Flex justifyContent="center" alignItems="center">
-                <span>Mail : </span>
+                <span>Mail :</span>
                 <p>rob.blanquart02100@gmail.com</p>
               </Flex>
               <button>
@@ -143,8 +192,8 @@ const me = () => {
                 <p>Télécharger mon CV</p>
               </button>
             </Flex>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </Grid>
     </>
   );

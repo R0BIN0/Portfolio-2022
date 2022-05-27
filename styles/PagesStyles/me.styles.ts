@@ -16,6 +16,13 @@ export const Grid = styled.section`
     width: 100%;
     height: 100%;
     position: relative;
+    overflow: hidden;
+  }
+
+  .img-animation {
+    width: 100%;
+    height: 100%;
+    /* transform: scale(2); */
   }
 
   .grid-content {
