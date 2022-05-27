@@ -7,6 +7,7 @@ import Image from "next/image";
 import { PageTransition, Flex, Text } from "../styles/Global/Global.styles";
 import ImgLoader from "../components/ImgLoader/ImgLoader";
 import { Grid } from "../styles/PagesStyles/me.styles";
+import Head from "next/head";
 
 const me = () => {
   useEffect(() => {
@@ -84,6 +85,11 @@ const me = () => {
 
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio Robin Blanquart | Qui suis-je</title>
+      </Head>
+
       <motion.div
         exit={{ opacity: 0, transition: { duration: 2 } }}
       ></motion.div>
