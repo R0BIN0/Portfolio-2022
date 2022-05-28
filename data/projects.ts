@@ -46,7 +46,7 @@ export const projects: Project[] = [
       "Faire des projets oui, mais si on peut les mettre en avant c’est mieux, c’est exactement avec ce but précis que j’entame mon premier portfolio. Ayant de maigres connaissances avec Next.js j’ai décidé d’en apprendre un peu plus dessus, notamment son environnement propice à l’optimisation qui est un sujet essentiel de mon projet, car très gourmand (dû à l’utilisation d’images assez grosses ou encore de vidéos) Les performances sont d’ailleurs à l’origine des principales difficultés de ce projet. En dépit de nombreux efforts fournis (optimisation des images / “lazyLoading”). cela m’aura permis d’apprendre à disséquer les éléments de la console Google. Après la réalisation en brut de la maquette initiale, j’ai décidé d’intégrer des animations grâce à “Framer-motion” une librairie d’animation idéale pour l’environnement de React. Une intégration facilitée par une expérience précédente avec cette librarie (projet : “Panier”). C’est alors que mon portfolio 2022 voit le jour avec une hâte sans précédent de voir mon évolution pour mon portfolio 2023 !",
     video:
       "https://res.cloudinary.com/e-tech-test/video/upload/v1652532636/testportfolio_k9rlbw.mp4",
-    backgroundColor: "#393A46",
+    backgroundColor: "#422727",
   },
   {
     title: "Mobile App",
@@ -67,7 +67,7 @@ export const projects: Project[] = [
       "C’est avec un but précis et une inéxpérience en terme de développement mobile que ma curiosité est invitée à en apprendre davantage sur ce dernier. Après avoir prit connaissance des fondamentaux de React Native. Ce n’est pas sans mal que je mets en place un environnement de développement mobile via “Android Studio” et “Expo” afin de créer un téléphone virtuel puis de créer une base de travail solide grâce à Expo. Après quelques mini-projets afin d’acquérir de l’expérience ainsi que des habitudes, je décide enfin de créer ma première application avec Typescript pour renforcer mon code et prévenir des éventuels problèmes. Hormis le “styling” des éléments qui ressemble à la syntaxe de “Styled Component”, ce projet m’a posé bien des soucis, premièrement avec l’importation de polices d’écritures qui de prime-abord  n’est pas très limpide. Vient ensuite l’utilisation du “localStorage” qui est quelques peu différent de celui du web (utilisation de “AsyncStorage” de la communauté React Native). Dernièrement il fallait prévenir les failles possibles de l’API (TMDB), comme le manque d’image de fond ou d’autres valeurs, Typescrit ayant été très utile ici. Finalement le projet a été posté sur le store d’Expo donnant un résultat assez agréable visuellement avec un système d’ajout au favoris et de recherches avancées.  ",
     video:
       "https://res.cloudinary.com/e-tech-test/video/upload/v1653575404/PortfolioMobileApp_ezvfkt.mp4",
-    backgroundColor: "#463939",
+    backgroundColor: "#151129",
   },
 
   {
@@ -89,7 +89,7 @@ export const projects: Project[] = [
       "Un “mini projet” n’évite pas à la mise en place d’un processus stricte, c’est pour ça que j’ai décidé pour ce projet de me plonger davantage dans les “bonnes pratiques” de développement, après quelques recherches je mets en place “Prettier” ainsi que “ESLint” afin de converser un style de code linéaire et gagner en propreté de code. De plus en amont du projet j’ai fais beaucoup de recherches sur les “spread operators” ainsi que la notion de “Mémoïsation” en React. Mes armes faites j’engage le projet, sans réels problèmes jusqu’à la mise en place de la librarie d’animation “Framer Motion” qui en raison des “render(s)” générés par une application React à chaque changement de state ont complexifié le rendu de mes animations (ex: animations qui se répètent). Après plusieurs recherches ainsi qu’approfondissement de la documentation de framer-motion, les bugs n’étaient devenus que de mauvais souvenirs, laissant place à un projet visuellement appréciable.",
     video:
       "https://res.cloudinary.com/e-tech-test/video/upload/v1653576999/PortfolioPanier_trnhre.mp4",
-    backgroundColor: "#464639",
+    backgroundColor: "#3C2C05",
   },
 
   {
@@ -140,7 +140,7 @@ export const projectsHome: ProjectHome[] = [
       ESLint,
       Husky,
     ],
-    backgroundColor: "#393A46",
+    backgroundColor: "#422727",
     firstTitle:
       "Portfolio.. ception ! Il regroupe mes plus gros projets permettant d’expliquer et de faire comprendre le rôle que j’ai joué à travers mes différentes créations.",
     site: "",
@@ -155,7 +155,7 @@ export const projectsHome: ProjectHome[] = [
     technologies: [React, TypeScript, Prettier, ESLint, AndroidStudio],
     image:
       "https://res.cloudinary.com/e-tech-test/image/upload/v1653568672/Frame_31_1_1_yp1mfl.png",
-    backgroundColor: "#463939",
+    backgroundColor: "#151129",
     firstTitle:
       "Movie App est une application IOS et Android de films avec système de recherche et d’ajout aux favoris avec l’utilisation de l’API “The Movie DataBase (TMDB) !",
     site: "https://expo.dev/@robino02100/mobile-movie-app",
@@ -170,7 +170,7 @@ export const projectsHome: ProjectHome[] = [
     technologies: [React, JavaScript, FramerMotion, Prettier, ESLint],
     image:
       "https://res.cloudinary.com/e-tech-test/image/upload/v1653561163/Frame_25_2_vine9f.png",
-    backgroundColor: "#464639",
+    backgroundColor: "#3C2C05",
     firstTitle:
       "Le projet “Panier” est un site de montres de luxe ayant les fonctionnalités d’un simple système de panier, certes mais avec style ! ",
     site: "https://r0bin0.github.io/Cart-FramerMotion/#/",

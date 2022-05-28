@@ -115,7 +115,7 @@ export const CardRight = styled.div<CardRight>`
       height: 100%;
       z-index: 100;
       background-color: ${({ backgroundcolor }) => backgroundcolor};
-      opacity: 0.3;
+      opacity: 0.25;
     }
   }
 `;
