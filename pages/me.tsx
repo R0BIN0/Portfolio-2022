@@ -2,14 +2,18 @@
 import React, { useEffect } from "react";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+import Head from "next/head";
 
 // Styles
 import { PageTransition, Flex, Text } from "../styles/Global/Global.styles";
-import ImgLoader from "../components/ImgLoader/ImgLoader";
 import { Grid } from "../styles/PagesStyles/me.styles";
-import Head from "next/head";
+
+// Components
+import ImgLoader from "../components/ImgLoader/ImgLoader";
 
 const me = () => {
+  // ========= animation and page transition ========= //
+
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
@@ -90,6 +94,8 @@ const me = () => {
         <title>Portfolio Robin Blanquart | Qui suis-je</title>
       </Head>
 
+      {/* =========== RELATIVE TO PAGE TRANSITION =========== */}
+
       <motion.div
         exit={{ opacity: 0, transition: { duration: 2 } }}
       ></motion.div>
@@ -104,6 +110,8 @@ const me = () => {
           <ImgLoader />
         </Flex>
       </PageTransition>
+
+      {/* =================================================== */}
 
       <Grid>
         <div className="img-container">

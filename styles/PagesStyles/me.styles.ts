@@ -4,8 +4,6 @@ import styled from "styled-components";
 // Variables
 import { colors, fontFamily, fontSize, margin } from "../../config/variables";
 
-// Types
-
 export const Grid = styled.section`
   width: 100%;
   min-height: calc(100vh - 4rem);
@@ -22,7 +20,6 @@ export const Grid = styled.section`
   .img-animation {
     width: 100%;
     height: 100%;
-    /* transform: scale(2); */
   }
 
   .grid-content {
@@ -43,6 +40,10 @@ export const Grid = styled.section`
       border-right: 2px solid ${colors.SECONDARY};
       z-index: -1;
     }
+  }
+
+  .grid-contact-container {
+    width: 100%;
   }
 
   .grid-contact-container a {
@@ -150,6 +151,10 @@ export const Grid = styled.section`
       width: 100%;
       height: 400px;
       position: relative;
+    }
+
+    .grid-contact-container button {
+      width: 100%;
     }
   }
 `;
