@@ -46,7 +46,7 @@ export const Grid = styled.section`
     width: 100%;
   }
 
-  .grid-contact-container a {
+  .grid-contact-link {
     color: ${colors.CTA};
     text-decoration: underline;
     font-weight: 700;
@@ -69,7 +69,7 @@ export const Grid = styled.section`
     margin-left: 0.25rem;
   }
 
-  .grid-contact-container button {
+  .me-dowload-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,6 +78,8 @@ export const Grid = styled.section`
     padding: 1rem;
     border: 1px solid ${colors.PRIMARY};
     position: relative;
+    text-decoration: none;
+    font-size: ${fontSize.S};
 
     &::before {
       content: "";
@@ -153,7 +155,7 @@ export const Grid = styled.section`
       position: relative;
     }
 
-    .grid-contact-container button {
+    .me-dowload-btn {
       width: 100%;
     }
   }

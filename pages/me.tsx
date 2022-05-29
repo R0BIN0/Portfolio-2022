@@ -176,6 +176,7 @@ const me = () => {
               flexFlow={true}
             >
               <a
+                className="grid-contact-link"
                 target="_blank"
                 rel="noreferrer"
                 href="https://github.com/R0BIN0"
@@ -183,6 +184,7 @@ const me = () => {
                 Github
               </a>
               <a
+                className="grid-contact-link"
                 target="_blank"
                 rel="noreferrer"
                 href="https://www.linkedin.com/in/robin-blanquart-44107122b/"
@@ -193,7 +195,11 @@ const me = () => {
                 <span>Mail :</span>
                 <p>rob.blanquart02100@gmail.com</p>
               </Flex>
-              <button>
+              <a
+                className="me-dowload-btn"
+                href="/CV_BLANQUART_ROBIN_portfolio.pdf"
+                download="CV_ROBIN_BLANQUART"
+              >
                 <svg
                   width="16"
                   height="16"
@@ -204,7 +210,7 @@ const me = () => {
                   <path d="M0.666667 14.6667H15.3333C15.5101 14.6667 15.6797 14.7369 15.8047 14.8619C15.9298 14.987 16 15.1565 16 15.3333C16 15.5101 15.9298 15.6797 15.8047 15.8047C15.6797 15.9298 15.5101 16 15.3333 16H0.666667C0.489856 16 0.320287 15.9298 0.195262 15.8047C0.070238 15.6797 0 15.5101 0 15.3333C0 15.1565 0.070238 14.987 0.195262 14.8619C0.320287 14.7369 0.489856 14.6667 0.666667 14.6667ZM8.66667 9.38133L13.5893 4.45733L14.532 5.4L7.93333 12L1.33333 5.4L2.276 4.45733L7.33333 9.51467V0H8.66667V9.38133Z" />
                 </svg>
                 <p>Télécharger mon CV</p>
-              </button>
+              </a>
             </Flex>
           </motion.div>
         </motion.div>
