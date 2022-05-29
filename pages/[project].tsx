@@ -151,7 +151,9 @@ const project: FC<Props> = ({ obj }) => {
               viewport={{ once: true }}
               variants={sectionAnimation}
             >
-              <ButtonGithub txt="Code source" href={obj.github} />
+              {obj.github && (
+                <ButtonGithub txt="Code source" href={obj.github} />
+              )}
               <ButtonLink
                 external={true}
                 txt="Visiter le site"
