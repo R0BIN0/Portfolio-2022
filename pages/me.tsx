@@ -166,7 +166,7 @@ const me = () => {
             . C’est alors que peu à peu je me suis désisté du milieu scolaire et
             j’ai ainsi concentré toute mon énergie dans{" "}
             <strong>ce que j’aimais le plus, la programmation</strong>. C’est en
-            ayant comme appât la connaissance, que nuit et jour, je développe
+            ayant comme appât la connaissance, que jour et nuit, je développe
             sans être limité par un programme uniforme et désuet.
           </Text>
           <motion.div variants={items} className="grid-contact-container">
