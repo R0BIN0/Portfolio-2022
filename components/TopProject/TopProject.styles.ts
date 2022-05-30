@@ -27,8 +27,8 @@ export const ButtonBack = styled.a`
     transform: rotate(180deg);
   }
 
-  @media screen and (max-width: 1250px) {
-    right: 3rem;
+  @media screen and (max-width: 1350px) {
+    left: 3rem;
     top: 2rem;
   }
 
@@ -41,8 +41,8 @@ export const ButtonBack = styled.a`
     }
   }
 
-  @media screen and (max-width: 768px) {
-    right: 1.5rem;
+  @media screen and (max-width: 500px) {
+    left: 1.5rem;
     top: 1.5rem;
   }
 `;

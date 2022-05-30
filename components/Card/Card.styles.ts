@@ -20,7 +20,7 @@ export const CardBox = styled.div<CardBox>`
   display: grid;
   grid-template-columns: 300px 1fr;
   background-color: ${({ backgroundcolor }) => backgroundcolor};
-  transition: transform 200ms cubic-bezier(1, 0, 0, 1) 0ms;
+  transition: transform 350ms cubic-bezier(0.7, 0, 0.15, 1) 0ms;
 
   position: relative;
   &:hover {
