@@ -165,4 +165,8 @@ body {
   line-height: 1;
   font-family: ${fontFamily.SANS_SERIF};
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}
 `;
