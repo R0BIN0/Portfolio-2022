@@ -9,7 +9,7 @@ import { colors, fontSize } from "../../config/variables";
 export const ButtonBack = styled.a`
   background-color: white;
   position: fixed;
-  right: 6rem;
+  left: 6rem;
   top: 6rem;
   font-size: ${fontSize.LG};
   font-weight: 500;
@@ -23,7 +23,8 @@ export const ButtonBack = styled.a`
 
   svg {
     width: 9px;
-    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    transform: rotate(180deg);
   }
 
   @media screen and (max-width: 1250px) {
@@ -36,7 +37,7 @@ export const ButtonBack = styled.a`
 
     svg {
       width: 7px;
-      margin-left: 0.5rem;
+      margin-right: 0.5rem;
     }
   }
 

@@ -76,7 +76,6 @@ const TopProject: FC<TopProjectProps> = ({
 
         <Link href="/" passHref>
           <ButtonBack>
-            <p>Retour</p>
             <svg
               width="9"
               height="16"
@@ -92,6 +91,7 @@ const TopProject: FC<TopProjectProps> = ({
                 strokeLinejoin="round"
               />
             </svg>
+            <p>Retour</p>
           </ButtonBack>
         </Link>
 
