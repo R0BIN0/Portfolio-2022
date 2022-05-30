@@ -27,7 +27,7 @@ export const projects: Project[] = [
     site: "",
     github: "https://github.com/R0BIN0/Portfolio-2022",
     description:
-      "Faire rester attentive la personne qui lit actuellement ces lignes, le maintien global des performances et un apprentissage approfondi des notions de Next.js font partie de la longue liste des objectifs de ce projet.",
+      "Conserver un design simple et le plus ergonomique possible, le maintien global des performances et un apprentissage approfondi des notions de Next.js font partie de la longue liste des objectifs de ce projet.",
     image:
       "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
     technologies: [
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     site: "https://expo.dev/@robino02100/mobile-movie-app",
     github: "https://github.com/R0BIN0/Mobile-Movie-app",
     description:
-      "J’avais en ligne de mire d’apprendre les rudiments du développement mobile ainsi que ses propres codes, je me suis heurté à divers problèmes comme à l’adéquation de l’environnement de code assez différent de celui du web. ",
+      "J’avais en ligne de mire d’apprendre les rudiments du développement mobile ainsi que ses propres codes. C'est en me plongeant dedans que j'ai pu enrichir mes compétences et ainsi avoir une vision plus lucide du développement mobile.",
     image:
       "https://res.cloudinary.com/e-tech-test/image/upload/v1653568672/Frame_31_1_1_yp1mfl.png",
     technologies: [React, TypeScript, Prettier, ESLint, AndroidStudio],
@@ -64,7 +64,7 @@ export const projects: Project[] = [
       "“L'important est de ne jamais cesser de poser des questions. Ne perdez jamais une sainte curiosité” une citation d’Albert Einstein qui prend tout son sens ici...",
     role: "Mon principal but ici était de développer une application mobile en partant de 0 (ou presque) avec React Native, technologie qui permet de développer des applications IOS et Android grâce à l’environnement React. Il fallait alors apporter un design propre aux appareils mobiles et proposer une application pleinement compatible des 2 systèmes d’exploitation.",
     process:
-      "C’est avec un but précis et une inéxpérience en terme de développement mobile que ma curiosité est invitée à en apprendre davantage sur ce dernier. Après avoir pris connaissance des fondamentaux de React Native. Ce n’est pas sans mal que je mets en place un environnement de développement mobile via “Android Studio” et “Expo” afin de créer un téléphone virtuel puis de créer une base de travail solide grâce à Expo. Après quelques mini-projets afin d’acquérir de l’expérience ainsi que des habitudes, je décide enfin de créer ma première application avec Typescript pour renforcer mon code et prévenir des éventuels problèmes. Hormis le “styling” des éléments qui ressemble à la syntaxe de “Styled Component”, ce projet m’a posé bien des soucis, premièrement avec l’importation de polices d’écritures qui de prime-abord  n’est pas très limpide. Vient ensuite l’utilisation du “localStorage” qui est quelque peu différent de celui du web (utilisation de “AsyncStorage” de la communauté React Native). Dernièrement il fallait prévenir les failles possibles de l’API (TMDB), comme le manque d’image de fond ou d’autres valeurs, Typescrit ayant été très utile ici. Finalement le projet a été posté sur le store d’Expo donnant un résultat assez agréable visuellement avec un système d’ajout aux favoris et de recherches avancées.  ",
+      "C’est avec un but précis et une inéxpérience en terme de développement mobile que ma curiosité est invitée à en apprendre davantage sur ce dernier. Après avoir pris connaissance des fondamentaux de React Native. Ce n’est pas sans mal que je mets en place un environnement de développement mobile via “Android Studio” et “Expo” afin de créer un téléphone virtuel puis de créer une base de travail solide grâce à Expo. Après quelques mini-projets afin d’acquérir de l’expérience ainsi que des habitudes, je décide enfin de créer ma première application avec Typescript pour renforcer mon code et prévenir des éventuels problèmes. Hormis le “styling” des éléments qui ressemble à la syntaxe de “Styled Component”, ce projet m’a posé bien des soucis, premièrement avec l’importation de polices d’écritures qui de prime-abord  n’est pas très limpide. Vient ensuite l’utilisation du “localStorage” qui est quelque peu différent de celui du web (utilisation de “AsyncStorage” de la communauté React Native). Dernièrement il fallait prévenir les failles possibles de l’API (TMDB), comme le manque d’image de fond ou d’autres valeurs, Typescript ayant été très utile ici. Finalement le projet a été posté sur le store d’Expo donnant un résultat assez agréable visuellement avec un système d’ajout aux favoris et de recherches avancées.  ",
     video:
       "https://res.cloudinary.com/e-tech-test/video/upload/v1653575404/PortfolioMobileApp_ezvfkt.mp4",
     backgroundColor: "#151129",
@@ -83,10 +83,10 @@ export const projects: Project[] = [
       "https://res.cloudinary.com/e-tech-test/image/upload/v1653561163/Frame_25_2_vine9f.png",
     technologies: [React, JavaScript, FramerMotion, Prettier, ESLint],
     secondTitle:
-      "Un projet simple d’apparence mais qui n’en n’a que l’air, en effet l’utilisation d’une librarie d’animation avec React à su me poser quelques obstacles",
+      "Un projet simple d’apparence mais qui n’en n’a que l’air, en effet l’utilisation d’une librairie d’animation avec React à su me poser quelques obstacles",
     role: "Mon rôle ici était de proposer un design original pour un site de produits de luxe, et ainsi coordonner parfaitement le côté technique d’un panier (ajout, modification de mon panier...) en temps réel, et la partie visuelle qui devait rester attrayante et à minima intuitive.  ",
     process:
-      "Un “mini projet” n’évite pas à la mise en place d’un processus stricte, c’est pour cette raison que j’ai décidé pour ce projet de me plonger davantage dans les “bonnes pratiques” de développement, après quelques recherches je mets en place “Prettier” ainsi que “ESLint” afin de converser un style de code linéaire et gagner en propreté de code. De plus en amont du projet j’ai fait beaucoup de recherches sur les “spread operators” ainsi que la notion de “Mémoïsation” en React. Mes armes faites j’engage le projet, sans réels problèmes jusqu’à la mise en place de la librarie d’animation “Framer Motion” qui en raison des “render(s)” générés par une application React à chaque changement de state ont complexifié le rendu de mes animations (ex: animations qui se répètent). Après plusieurs recherches ainsi qu’approfondissement de la documentation de framer-motion, les bugs n’étaient devenus que de mauvais souvenirs, laissant place à un projet visuellement appréciable.",
+      "Un “mini projet” ne se soustrait pas à la mise en place d’un processus stricte, c’est pour cette raison que j’ai décidé pour ce projet de me plonger davantage dans les “bonnes pratiques” de développement, après quelques recherches je mets en place “Prettier” ainsi que “ESLint” afin de converser un style de code linéaire et gagner en propreté de code. De plus en amont du projet j’ai fait beaucoup de recherches sur les “spread operators” ainsi que la notion de “Mémoïsation” en React. Mes armes faites j’engage le projet, sans réels problèmes jusqu’à la mise en place de la librairie d’animation “Framer Motion” qui en raison des “render(s)” générés par une application React à chaque changement de state ont complexifié le rendu de mes animations (ex: animations qui se répètent). Après plusieurs recherches ainsi qu’approfondissement de la documentation de framer-motion, les bugs n’étaient devenus que de mauvais souvenirs, laissant place à un projet visuellement appréciable.",
     video:
       "https://res.cloudinary.com/e-tech-test/video/upload/v1653576999/PortfolioPanier_trnhre.mp4",
     backgroundColor: "#3C2C05",
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     title: "E-Tech",
     href: "e_tech",
     firstTitle:
-      "E-Tech est un site e-commerce fictif de ventes de produits et périphériques d’ordinateur avec la plupart différentes fonctionnalités présente sur un site de vente en ligne .",
+      "E-Tech est un site e-commerce fictif de ventes de produits et périphériques d’ordinateur avec la plupart des différentes fonctionnalités présentes sur un site de vente en ligne.",
     site: "https://frozen-plains-30973.herokuapp.com/",
     github: "",
     description:
@@ -145,7 +145,7 @@ export const projectsHome: ProjectHome[] = [
       "Portfolio.. ception ! Il regroupe mes plus gros projets permettant d’expliquer et de faire comprendre le rôle que j’ai joué à travers mes différentes créations.",
     site: "",
     description:
-      "Faire rester attentive la personne qui lit actuellement ces lignes , le maintien global des performances et un apprentissage approfondi des notions de Next.js font partie de la longue liste des objectifs de ce projet.",
+      "Conserver un design simple et le plus ergonomique possible, le maintien global des performances et un apprentissage approfondi des notions de Next.js font partie de la longue liste des objectifs de ce projet.",
   },
   {
     href: "mobile_app",
@@ -160,7 +160,7 @@ export const projectsHome: ProjectHome[] = [
       "Movie App est une application IOS et Android de films avec système de recherche et d’ajout aux favoris avec l’utilisation de l’API “The Movie DataBase (TMDB) !",
     site: "https://expo.dev/@robino02100/mobile-movie-app",
     description:
-      "J’avais en ligne de mire d’apprendre les rudiments du développement mobile ainsi que ses propres codes, je me suis heurter à diverses problèmes comme à l’adéquation à l’environnement de code assez différent de celui du web. ",
+      "J’avais en ligne de mire d’apprendre les rudiments du développement mobile ainsi que ses propres codes. C'est en me plongeant dedans que j'ai pu enrichir mes compétences et ainsi avoir une vision plus lucide du développement mobile.",
   },
   {
     href: "panier",
@@ -195,7 +195,7 @@ export const projectsHome: ProjectHome[] = [
     ],
     backgroundColor: "#393D46",
     firstTitle:
-      "E-Tech est un site e-commerce fictif de ventes de produits et périphériques d’ordinateur avec la plupart différentes fonctionnalités présente sur un site de vente en ligne .",
+      "E-Tech est un site e-commerce fictif de ventes de produits et périphériques d’ordinateur avec la plupart des différentes fonctionnalités présentes sur un site de vente en ligne.",
     site: "https://frozen-plains-30973.herokuapp.com/",
     description:
       "Le but de ce projet a été d'apprendre à manipuler les différents aspects de la programmation web : faire interagir le Front-end avec le Back-end et une base de données mais également d'améliorer mon autonomie face aux difficultés rencontrées.",
