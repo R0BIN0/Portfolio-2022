@@ -122,7 +122,7 @@ const me = () => {
             className="img-animation"
           >
             <Image
-              src="https://res.cloudinary.com/e-tech-test/image/upload/v1653600049/stephanie-cook-NDCy2-9JhUs-unsplash_2_wzs0ic.png"
+              src="https://res.cloudinary.com/e-tech-test/image/upload/v1654621480/IMG_0507-min_ohujra.jpg"
               alt="photo de Robin Blanquart"
               layout="fill"
               objectFit="cover"

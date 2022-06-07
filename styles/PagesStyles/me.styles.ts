@@ -6,9 +6,10 @@ import { colors, fontFamily, fontSize, margin } from "../../config/variables";
 
 export const Grid = styled.section`
   width: 100%;
-  min-height: calc(100vh - 4rem);
+  height: calc(100vh - 4rem);
+  min-height: 700px;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 35% 65%;
 
   .img-container {
     width: 100%;
@@ -35,7 +36,7 @@ export const Grid = styled.section`
       position: absolute;
       top: 0;
       left: 0;
-      width: 85%;
+      width: 75%;
       height: 100%;
       border-right: 2px solid ${colors.SECONDARY};
       z-index: -1;
@@ -123,8 +124,8 @@ export const Grid = styled.section`
     }
   }
 
-  @media screen and (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media screen and (max-width: 1250px) {
+    grid-template-columns: 45% 55%;
     .grid-content {
       padding: 0 2rem;
     }
@@ -137,6 +138,10 @@ export const Grid = styled.section`
 
     .grid-content {
       padding: 2rem;
+
+      &::after {
+        width: 85%;
+      }
     }
 
     .img-container {
