@@ -29,7 +29,7 @@ export const projects: Project[] = [
     description:
       "Conserver un design simple et le plus ergonomique possible, le maintien global des performances et un apprentissage approfondi des notions de Next.js font partie de la longue liste des objectifs de ce projet.",
     image:
-      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1654680894/Frame_33_solot0.png",
     technologies: [
       Next,
       TypeScript,
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     process:
       "Faire des projets oui, mais si on peut les mettre en avant c’est mieux, c’est exactement dans ce but précis que j’entame mon premier portfolio. Ayant de maigres connaissances avec Next.js j’ai décidé d’en apprendre un peu plus dessus, notamment son environnement propice à l’optimisation qui est un sujet essentiel de mon projet, car très gourmand (dû à l’utilisation d’images assez grosses ou encore de vidéos) Les performances sont d’ailleurs à l’origine des principales difficultés de ce projet. En dépit de nombreux efforts fournis (optimisation des images / “lazyLoading”). cela m’aura permis d’apprendre à disséquer les éléments de la console Google. Après la réalisation en brut de la maquette initiale, j’ai décidé d’intégrer des animations grâce à “Framer-motion” une librairie d’animation idéale pour l’environnement de React. Une intégration facilitée par une expérience précédente avec cette librairie (projet : “Panier”). C’est alors que mon portfolio 2022 voit le jour avec une hâte sans précédent de voir mon évolution pour mon portfolio 2023 !",
     video:
-      "https://res.cloudinary.com/e-tech-test/video/upload/v1652532636/testportfolio_k9rlbw.mp4",
+      "https://res.cloudinary.com/e-tech-test/video/upload/v1654681870/PortfolioPortfolioProject_sxujov.mp4",
     backgroundColor: "#422727",
   },
   {
@@ -130,7 +130,7 @@ export const projectsHome: ProjectHome[] = [
     type: "Site web",
     title: "Portfolio",
     image:
-      "https://res.cloudinary.com/e-tech-test/image/upload/v1652561839/Frame2_rhb6fm.png",
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1654680894/Frame_33_solot0.png",
     technologies: [
       Next,
       TypeScript,
