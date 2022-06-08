@@ -58,7 +58,7 @@ export const projects: Project[] = [
     description:
       "J’avais en ligne de mire d’apprendre les rudiments du développement mobile ainsi que ses propres codes. C'est en me plongeant dedans que j'ai pu enrichir mes compétences et ainsi avoir une vision plus lucide du développement mobile.",
     image:
-      "https://res.cloudinary.com/e-tech-test/image/upload/v1653568672/Frame_31_1_1_yp1mfl.png",
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1654626274/Frame_32-min_chxn2z.jpg",
     technologies: [React, TypeScript, Prettier, ESLint, AndroidStudio],
     secondTitle:
       "“L'important est de ne jamais cesser de poser des questions. Ne perdez jamais une sainte curiosité” une citation d’Albert Einstein qui prend tout son sens ici...",
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     process:
       "C’est avec un but précis et une inéxpérience en terme de développement mobile que ma curiosité est invitée à en apprendre davantage sur ce dernier. Après avoir pris connaissance des fondamentaux de React Native. Ce n’est pas sans mal que je mets en place un environnement de développement mobile via “Android Studio” et “Expo” afin de créer un téléphone virtuel puis de créer une base de travail solide grâce à Expo. Après quelques mini-projets afin d’acquérir de l’expérience ainsi que des habitudes, je décide enfin de créer ma première application avec Typescript pour renforcer mon code et prévenir des éventuels problèmes. Hormis le “styling” des éléments qui ressemble à la syntaxe de “Styled Component”, ce projet m’a posé bien des soucis, premièrement avec l’importation de polices d’écritures qui de prime-abord  n’est pas très limpide. Vient ensuite l’utilisation du “localStorage” qui est quelque peu différent de celui du web (utilisation de “AsyncStorage” de la communauté React Native). Dernièrement il fallait prévenir les failles possibles de l’API (TMDB), comme le manque d’image de fond ou d’autres valeurs, Typescript ayant été très utile ici. Finalement le projet a été posté sur le store d’Expo donnant un résultat assez agréable visuellement avec un système d’ajout aux favoris et de recherches avancées.  ",
     video:
-      "https://res.cloudinary.com/e-tech-test/video/upload/v1653575404/PortfolioMobileApp_ezvfkt.mp4",
+      "https://res.cloudinary.com/e-tech-test/video/upload/v1654679049/PortfolioMobileApp_jpdvc5.mp4",
     backgroundColor: "#151129",
   },
 
@@ -154,10 +154,10 @@ export const projectsHome: ProjectHome[] = [
     title: "Movie App",
     technologies: [React, TypeScript, Prettier, ESLint, AndroidStudio],
     image:
-      "https://res.cloudinary.com/e-tech-test/image/upload/v1653568672/Frame_31_1_1_yp1mfl.png",
+      "https://res.cloudinary.com/e-tech-test/image/upload/v1654626274/Frame_32-min_chxn2z.jpg",
     backgroundColor: "#151129",
     firstTitle:
-      "Movie App est une application IOS et Android de films avec système de recherche et d’ajout aux favoris avec l’utilisation de l’API “The Movie DataBase (TMDB) !",
+      "Movie App est une application IOS et Android de films avec système de recherche et d’ajout aux favoris avec l’utilisation de l’API “The Movie DataBase“ (TMDB) !",
     site: "https://expo.dev/@robino02100/mobile-movie-app",
     description:
       "J’avais en ligne de mire d’apprendre les rudiments du développement mobile ainsi que ses propres codes. C'est en me plongeant dedans que j'ai pu enrichir mes compétences et ainsi avoir une vision plus lucide du développement mobile.",

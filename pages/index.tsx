@@ -55,8 +55,6 @@ const Home: FC = () => {
     if (pathname === "/me") document.body.style.overflow = "hidden";
   }, [pathname]);
 
-  console.log(pathname);
-
   const switchTransition = (): void => {
     setGoToMe(true);
   };
