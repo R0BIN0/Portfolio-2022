@@ -60,11 +60,11 @@ export class MyDocument extends Document {
             property="og:description"
             content="Je suis Robin Blanquart. Jeune développeur passionné par le développement web et l’Ui/Ux Design."
           />
+          <meta property="og:site_name" content="Portfolio 2022" />
           <meta
-            property="og:site_name"
-            content="Robin Blanquart - Portfolio 2022"
+            property="og:image"
+            content="https://res.cloudinary.com/e-tech-test/image/upload/v1654684607/OG-min_n61lip.png"
           />
-          <meta property="og:image" content="" />
 
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="" />
@@ -76,7 +76,10 @@ export class MyDocument extends Document {
             property="twitter:description"
             content="Je suis Robin Blanquart. Jeune développeur passionné par le développement web et l’Ui/Ux Design."
           />
-          <meta property="twitter:image" content=""></meta>
+          <meta
+            property="twitter:image"
+            content="https://res.cloudinary.com/e-tech-test/image/upload/v1654684607/OG-min_n61lip.png"
+          ></meta>
 
           <meta
             name="theme-color"
